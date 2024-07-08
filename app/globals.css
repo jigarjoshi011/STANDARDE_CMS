@@ -3,13 +3,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* 
+
+*/
+html {
+  @apply scroll-smooth leading-[1.8];
+}
 
 body {
-  color: rgb(var(--foreground-rgb));
+  margin: 0;
   font-family: "Poppins", sans-serif;
-  -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  width: 100%;
-  color: white;
-  background-color: #121212;
+  -moz-osx-font-smoothing: grayscale;
+    background-color: #121212;
 }
