@@ -24,10 +24,10 @@ const config: Config = {
         // bulletGreenIMG: "url(/point-arrow-green.svg)",
       },
       colors: {
-        'text-primary': '#BBBBBB',
-        'text-second': '#999999',
-        'footer-primary': '#EFEDFD',
-        'btn-primary': '#320E5C',
+        "text-primary": "#BBBBBB",
+        "text-second": "#999999",
+        "footer-primary": "#EFEDFD",
+        "btn-primary": "#320E5C",
       },
       backgroundImage: {
         // titleShape: "url('/title_yellow_shape.svg')",
@@ -40,16 +40,17 @@ const config: Config = {
       fontFamily: {
         poppins: ["Poppins, sans-serif"],
       },
-     
+
       spacing: {
-       '70px': '70px',
-        '100px': '100px',   
-        '100dvh': '100dvh',        
+        "70px": "70px",
+        "100px": "100px",
+        "100dvh": "100dvh",
         unset: "unset",
       },
       fontSize: {
-        0: "0",        
+        0: "0",
         "76px": "76px",
+        "32px": "32px",
         unset: "unset",
       },
       lineHeight: {
@@ -62,11 +63,8 @@ const config: Config = {
         "03em": "0.03em",
         "0.96px": "0.96px",
       },
-    
     },
   },
   plugins: [],
 };
 export default config;
-
-
