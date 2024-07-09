@@ -3,7 +3,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <header className="border-black/10 py-3 px-32 backdrop-blur-md bg-black/20 bg-custom-gradient sticky top-0 z-[999] ">
+    <header className="border-black/10 py-4 px-32 backdrop-blur-md w-full  fixed top-0 z-[999] ">
       <div className="container mx-auto">
         <div className="flex flex-wrap justify-between items-center">
           <div className="navbar-brand text-white font-bold bg-black">

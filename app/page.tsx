@@ -2,6 +2,9 @@
 import AnimatedBackground from "@/components/AnimatedBackground/AnimatedBackground";
 import Image from "next/image";
 import Slider from "react-slick";
+import HeroImg from "../public/images/hero-img.png";
+import BgBlur from "../public/images/bg-blur.png";
+import heroSlider from "../public/images/hero-slider.png";
 
 export default function Home() {
   const settings = {
@@ -16,7 +19,7 @@ export default function Home() {
     <div>
       {/* FIRST SECTION */}
       <AnimatedBackground>
-        <section className="text-white min-h-screen flex flex-col justify-center items-center pt-100px py-16">
+        <section className="text-white min-h-screen flex pb-0 flex-col before:mix-blend-luminosity before:opacity-[0.4] justify-center items-center pt-160px py-16 relative  before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full z-0 before:z-[-1]  before:bg-bg-primary/30">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-76px text-text-primary xl:leading-79px font-bold mb-4 ">
               Revolution of Retail Industry
@@ -38,65 +41,72 @@ export default function Home() {
               pesto mayo rib ipsum melted sausage lovers. Large wing green
               stuffed crust pan stuffed.
             </p>
-            <div className="mx-auto"></div>
-
-            <div className="mt-8 bg-gray-900 rounded-lg p-4 max-w-3xl mx-auto">
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                <div className="w-3 h-3 rounded-full bg-green-500"></div>
-              </div>
-              {/* <Image src="path-to-your-search-interface-image.jpg" alt="Search Interface" className="w-full rounded-lg shadow-lg"> */}
+            <div className="mx-auto overflow-hidden max-h-580px hero-img ">
+              <Image src={HeroImg} alt="hero-img"/>
             </div>
 
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-              {/* <Image src="path-to-image1.jpg" alt="Retail Image 1" className="w-full h-40 object-cover rounded-lg">
-              <Image src="path-to-image2.jpg" alt="Retail Image 2" className="w-full h-40 object-cover rounded-lg">
-              <Image src="path-to-image3.jpg" alt="Retail Image 3" className="w-full h-40 object-cover rounded-lg"> */}
-            </div>
           </div>
         </section>
       </AnimatedBackground>
       {/* SECOND SECTION */}
-      <section className="text-white py-16 px-4 overflow-hidden">
+      <section className="text-white py-100px px-32 overflow-hidden">
         <div className="container mx-auto">
-          <h2 className="text-32px text-text-primary font-semibold mb-8">
+          <h2 className="text-32px text-text-primary font-semibold mb-12">
             AI Search Feature list
           </h2>
-          <div className="flex flex-col md:flex-row gap-8">
-            <div className="md:w-1/2">
+          <div className="flex flex-col md:flex-row gap-8 flex-wrap">
+            <div className="w-full">
               <div className="slider-container relative">
                 <div className="slider flex transition-transform duration-300 ease-in-out">
-                  <div className="card flex-shrink-0 w-full md:w-96 bg-gray-800 rounded-lg p-6 mr-4">
-                    <Slider {...settings}>
+                  <div className="card flex-shrink-0 w-full bg-card-primary rounded-40px px-112px py-80px pb-0 mr-4 text-center">
+                    {/* <Slider {...settings}>
                       <div className="feature-item h-full ">
                         <div className="feature-item-inside bg-lightGray lg:px-[70px] lg:py-[60px] px-[30px] py-[20px] h-full">
                           <div className="feature-desc font-normal lg:[&>p]:text-[26px] [&>p]:text-[18px] [&>p]:italic pb-14 tracking-[0.2px]">
-                            {/* <p>&quot;{firstEl?.description}&quot;</p> */}
+                           
                           </div>
                           <div className="testimonial-name">
                             <h4 className="!mb-0">
-                              {/* {firstEl?.testimonial_name} */}
+                          
                             </h4>
-                            {/* <p>{firstEl?.testimonial_designation}</p> */}
+                           
                           </div>
                         </div>
                       </div>
-                    </Slider>
+                    </Slider> */}
                     {/* <img src="path-to-card-image.jpg" alt="Feature" className="w-full h-48 object-cover rounded-lg mb-4"> */}
-                    <h3 className="text-xl font-semibold mb-2">
-                      Feature Title
+                    <h3 className="text-28px font-semibold mb-2">
+                    Pizza ipsum dolor meat lovers buffalo. Marinara meatball pan hand large Philly large spinach. Pan white Chicago string.
                     </h3>
-                    <p className="text-gray-400">
-                      Feature description goes here.
-                    </p>
+                    <div className="overflow-hidden mt-10">
+                      <Image src={heroSlider} alt="slider" className="mx-auto"/>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="md:w-1/2">
-              {/* <img src="path-to-large-image.jpg" alt="AI Search Interface" className="w-full rounded-lg shadow-lg"> */}
-            </div>
+            {/* <div className="w-full">
+              <div className="slider-container relative">
+                <div className="slider flex transition-transform duration-300 ease-in-out">
+                  <div className="card flex-shrink-0 w-full bg-bg-third rounded-40px px-112px py-80px pb-0 mr-4   ">
+                    <div className="flex items-center">
+                      <div className="relative w-1/2">
+                    <h3 className="text-28px font-medium leading-10 text-text-third mb-2">
+                    Pizza ipsum dolor meat lovers buffalo. Marinara meatball pan hand large Philly large.
+                    </h3>
+                    <p className="text-text-fourth text-base  font-normal">Pizza ipsum dolor meat lovers buffalo. Olives pineapple Chicago pesto mayo rib ipsum melted sausage lovers. Large wing green stuffed crust pan stuffed. Extra pineapple chicken burnt party fresh.</p>
+                    </div>  
+                    <div className="overflow-hidden mt-10 w-1/2">
+                      <Image src={heroSlider} alt="slider" className="mx-auto"/>
+                    </div>
+                    </div>
+                    
+                   
+                  </div>
+                </div>
+              </div>
+            </div> */}
+           
           </div>
         </div>
       </section>
@@ -104,11 +114,11 @@ export default function Home() {
       <section className="text-white py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <p className="text-purple-400 mb-2">Standards Smart's</p>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <button className="bg-btn-primary text-white px-6 py-3 rounded-full font-normal">AI FOR THE RETAILERS</button>
+            <h2 className="text-2xl md:text-4xl xl:text-5xl font-bold mt-9 mb-4">
               Retail & Service Transformation
             </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+            <p className="text-sm md:text-base mb-5 md:mb-10 xl:mb-14 text-text-second max-w-2xl mx-auto">
               Bring digital innovation to stores. Deliver seamless shopping
               experiences across channels to drive growth and create more
               engaging experiences that win loyalty.
@@ -183,16 +193,15 @@ export default function Home() {
       </section>
       {/* FOURTH SECTION */}
       {/* FIFTH SECTION */}
-      <section className="text-white py-16">
+      <section className="text-white py-16 px-32">
         <div className="container mx-auto px-4">
-          <div className="max-w-8xl mx-auto bg-black rounded-3xl p-10">
-            <div className="flex">
-              <div className="flex flex-col lg:flex-row">
-                <div className="w-full lg:w-3/5 mb-8 lg:mb-0 lg:pr-8">
-                  <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-                    Pizza ipsum dolor meat lovers buffalo. Mozzarella sautéed
-                    wing.
-                  </h1>
+          <div className="max-w-8xl pr-0 overflow-hidden mx-auto bg-black rounded-40px bg-radial px-16 pt-20 relative before:contents-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-black/50">
+            
+              <div className="flex flex-col lg:flex-row ">
+                <div className="w-full lg:w-1/2 mb-8 lg:mb-0 lg:pr-8 z-10">
+                  <h2 className="text-2xl !leading-3.25rem md:text-3xl xl:text-40px font-semibold mb-6">
+                  Pizza ipsum dolor meat lovers buffalo.
+                  </h2>
                   <ul className="flex flex-wrap gap-4 mb-6">
                     {[
                       "Free Trial",
@@ -215,9 +224,6 @@ export default function Home() {
                       </li>
                     ))}
                   </ul>
-                </div>
-
-                <div className="w-full lg:w-2/5 flex items-center justify-center lg:justify-end">
                   <a
                     href="#"
                     className="inline-flex items-center px-6 py-3 border border-white rounded-full text-base font-medium hover:bg-white hover:text-black transition-colors duration-300"
@@ -238,8 +244,12 @@ export default function Home() {
                     </svg>
                   </a>
                 </div>
+
+                <div className="w-full lg:w-1/2 flex items-center z-10">
+                  <Image src={heroSlider} alt="hero-mg" className="w-full h-full"/>
+                </div>
               </div>
-            </div>
+            
           </div>
         </div>
       </section>

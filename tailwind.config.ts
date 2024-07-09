@@ -24,10 +24,16 @@ const config: Config = {
         // bulletGreenIMG: "url(/point-arrow-green.svg)",
       },
       colors: {
+        "bg-primary": "#03011B",
+        "bg-second": "#111112",
+        "bg-third": "#F3F3F3",
         "text-primary": "#BBBBBB",
         "text-second": "#999999",
+        "text-fourth": "#434343",
+        "text-third": "#333333",
         "footer-primary": "#EFEDFD",
         "btn-primary": "#320E5C",
+        "card-primary": "#171718",
       },
       backgroundImage: {
         // titleShape: "url('/title_yellow_shape.svg')",
@@ -42,19 +48,27 @@ const config: Config = {
       },
 
       spacing: {
+       
         "70px": "70px",
+        "80px": "80px",
         "100px": "100px",
+        "112px": "112px",
+        "160px": "160px",
+        "580px": "580px",
         "100dvh": "100dvh",
         unset: "unset",
       },
       fontSize: {
         0: "0",
+        "28px": "28px",
+        "40px": "40px",
         "76px": "76px",
         "32px": "32px",
         unset: "unset",
       },
       lineHeight: {
         1: "1",
+        "3.25rem": "3.25rem", 
         "79px": "79px",
         unset: "unset",
         Normal: "normal",
@@ -62,6 +76,9 @@ const config: Config = {
       letterSpacing: {
         "03em": "0.03em",
         "0.96px": "0.96px",
+      },
+      borderRadius: {
+        '40px': '40px',
       },
     },
   },

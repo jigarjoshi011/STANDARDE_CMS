@@ -3,7 +3,7 @@ import React from 'react';
 
 const AnimatedBackground = ({ children }: { children: React.ReactNode}) => {
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden ">
       <div className="absolute inset-0 z-0">
         {[...Array(5)].map((_, index) => (
           <div
