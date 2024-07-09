@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import "./globals.css";
-
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 type MetaProps = {
   params: { slug: string[]; locale: string };
 };
@@ -28,7 +29,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {" "}
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
