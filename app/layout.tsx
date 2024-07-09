@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 import "./globals.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 type MetaProps = {
@@ -30,10 +32,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {" "}
-        <Header />
-        {children}
-        <Footer />
+          <Header />
+          {children}
+          <Footer />
       </body>
     </html>
   );

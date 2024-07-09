@@ -1,4 +1,4 @@
-import { CSSProperties, useState } from "react";
+import { useState } from "react";
 
 interface CustomCardProps {
   title?: string;
@@ -9,8 +9,6 @@ interface CustomCardProps {
   cardClass?: string;
   bodyClass?: string;
   isVisible?: boolean;
-  toggleSection?: any;
-  deleteSection: any;
 }
 
 const CustomCard = ({
@@ -22,10 +20,7 @@ const CustomCard = ({
   cardClass,
   bodyClass,
   isVisible,
-  toggleSection,
-  deleteSection,
 }: CustomCardProps) => {
-  const [showModal, setShowModal] = useState(false);
 
   return (
     <>
@@ -63,7 +58,7 @@ const CustomCard = ({
                 //     ? "hidden"
                 //     : "w-6 h-6 flex items-center justify-center rounded-sm bg-lightGray"
                 // }
-                onClick={() => setShowModal(true)}
+                // onClick={() => setShowModal(true)}
               >
                 {/* <RiDeleteBinLine className="text-danger" /> */}
               </button>

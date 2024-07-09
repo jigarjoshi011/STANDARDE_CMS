@@ -2,7 +2,9 @@
 import { NextPage } from "next";
 
 const Highlights: NextPage = () => {
-  return <div></div>;
+  return <div>
+    Highlights
+  </div>;
 };
 
 export default Highlights;
