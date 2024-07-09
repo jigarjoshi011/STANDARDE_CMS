@@ -3,6 +3,7 @@ import { useParams } from "next/navigation";
 import React from "react";
 import Image from "next/image";
 import Slider from "react-slick";
+import AnimatedBackground from "@/components/AnimatedBackground/AnimatedBackground";
 
 const CMSPage = () => {
   const settings = {
@@ -16,45 +17,49 @@ const CMSPage = () => {
   const { slug } = useParams<{ slug: string[] }>();
   return (
     <div>
-      <section className="bg-black text-white min-h-screen flex flex-col justify-center items-center px-4 py-16">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
-            Revolution of Retail Industry
-          </h1>
-          <p className="text-sm md:text-base mb-8 text-gray-400 max-w-2xl mx-auto">
-            Pizza ipsum dolor meat lovers buffalo. Olives pineapple Chicago
-            pesto mayo rib ipsum melted sausage lovers. Large wing green stuffed
-            cr
-          </p>
-          <button className="bg-indigo-700 text-white px-6 py-3 rounded-full font-semibold hover:bg-indigo-600 transition duration-300">
-            AI FOR THE RETAILERS
-          </button>
+      {/* FIRST SECTION */}
+      <AnimatedBackground>
+        <section className="bg-black text-white min-h-screen flex flex-col justify-center items-center pt-100px py-16">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-76px text-text-primary xl:leading-79px font-bold mb-4 ">
+              Revolution of Retail Industry
+            </h1>
+            <p className="text-sm md:text-base mb-5 md:mb-10 xl:mb-70px text-text-second max-w-2xl mx-auto">
+              Pizza ipsum dolor meat lovers buffalo. Olives pineapple Chicago
+              pesto mayo rib ipsum melted sausage lovers. Large wing green
+              stuffed cr
+            </p>
+            <button className="bg-btn-primary text-white px-6 py-3 rounded-full font-normal">
+              AI FOR THE RETAILERS
+            </button>
 
-          <h2 className="text-2xl md:text-4xl font-bold mt-16 mb-4">
-            Generative AI Search
-          </h2>
-          <p className="text-sm md:text-base mb-8 text-gray-400 max-w-2xl mx-auto">
-            Pizza ipsum dolor meat lovers buffalo. Olives pineapple Chicago
-            pesto mayo rib ipsum melted sausage lovers. Large wing green stuffed
-            crust pan stuffed.
-          </p>
+            <h2 className="text-2xl md:text-4xl xl:text-5xl font-bold mt-9 mb-4">
+              Generative AI Search
+            </h2>
+            <p className="text-sm md:text-base mb-10 text-text-second max-w-2xl mx-auto">
+              Pizza ipsum dolor meat lovers buffalo. Olives pineapple Chicago
+              pesto mayo rib ipsum melted sausage lovers. Large wing green
+              stuffed crust pan stuffed.
+            </p>
+            <div className="mx-auto"></div>
 
-          <div className="mt-8 bg-gray-900 rounded-lg p-4 max-w-3xl mx-auto">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-3 h-3 rounded-full bg-red-500"></div>
-              <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-              <div className="w-3 h-3 rounded-full bg-green-500"></div>
+            <div className="mt-8 bg-gray-900 rounded-lg p-4 max-w-3xl mx-auto">
+              <div className="flex items-center space-x-2 mb-4">
+                <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+              </div>
+              {/* <Image src="path-to-your-search-interface-image.jpg" alt="Search Interface" className="w-full rounded-lg shadow-lg"> */}
             </div>
-            {/* <Image src="path-to-your-search-interface-image.jpg" alt="Search Interface" className="w-full rounded-lg shadow-lg"> */}
-          </div>
 
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-            {/* <Image src="path-to-image1.jpg" alt="Retail Image 1" className="w-full h-40 object-cover rounded-lg">
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+              {/* <Image src="path-to-image1.jpg" alt="Retail Image 1" className="w-full h-40 object-cover rounded-lg">
                 <Image src="path-to-image2.jpg" alt="Retail Image 2" className="w-full h-40 object-cover rounded-lg">
                 <Image src="path-to-image3.jpg" alt="Retail Image 3" className="w-full h-40 object-cover rounded-lg"> */}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </AnimatedBackground>
       {/* SECOND SECTION */}
       <section className="bg-black text-white py-16 px-4 overflow-hidden">
         <div className="container mx-auto">
@@ -66,9 +71,7 @@ const CMSPage = () => {
                 <div className="slider flex transition-transform duration-300 ease-in-out">
                   <div className="card flex-shrink-0 w-full md:w-96 bg-gray-800 rounded-lg p-6 mr-4">
                     <Slider {...settings}>
-                      <div
-                        className="feature-item h-full "
-                      >
+                      <div className="feature-item h-full ">
                         <div className="feature-item-inside bg-lightGray lg:px-[70px] lg:py-[60px] px-[30px] py-[20px] h-full">
                           <div className="feature-desc font-normal lg:[&>p]:text-[26px] [&>p]:text-[18px] [&>p]:italic pb-14 tracking-[0.2px]">
                             {/* <p>&quot;{firstEl?.description}&quot;</p> */}

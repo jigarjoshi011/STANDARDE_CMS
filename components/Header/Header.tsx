@@ -3,10 +3,10 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <header className="border-black/10 py-4 px-32 backdrop-blur-md bg-black/20 bg-custom-gradient sticky top-0 z-50 h-16 ">
-      <div className="container mx-auto px-4">
+    <header className="border-black/10 py-3 px-32 backdrop-blur-md bg-black/20 bg-custom-gradient sticky top-0 z-[999] ">
+      <div className="container mx-auto">
         <div className="flex flex-wrap justify-between items-center">
-          <div className="navbar-brand text-white font-bold bg-black p-1">
+          <div className="navbar-brand text-white font-bold bg-black">
             <a href="">STANDARDE</a>
           </div>
           <nav className="flex space-x-10 text-white text-base">
