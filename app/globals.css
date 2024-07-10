@@ -17,6 +17,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   @apply bg-bg-second;
 }
-.bg-radial{
-background: radial-gradient(295.56% 249.54% at 2.89% 5.88%, #C22F7F 0%, #8329CA 100%);
+.bg-radial {
+  background: radial-gradient(295.56% 249.54% at 2.89% 5.88%,
+      #c22f7f 0%,
+      #8329ca 100%);
 }
