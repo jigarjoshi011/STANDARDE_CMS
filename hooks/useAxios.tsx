@@ -36,7 +36,7 @@ export const useAxios = (wpBaseUrl: boolean = false): UseAxios => {
       });
     }
 
-    // Add interceptors here
+    // Adding interceptors here
     instance.interceptors.request.use(
       (config) => {
         //Set token
@@ -57,7 +57,7 @@ export const useAxios = (wpBaseUrl: boolean = false): UseAxios => {
 
         if (response.status === 401) {
           if (typeof window === "object") {
-            router.push("/cms/auth/login");
+            router.push("/auth/login");
           }
         }
 
