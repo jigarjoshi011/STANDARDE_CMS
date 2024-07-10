@@ -4,11 +4,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+
 type MetaProps = {
-  params: { slug: string[]; locale: string };
+  params: {};
 };
 export const generateMetadata = async (props: MetaProps): Promise<Metadata> => {
-  const { params } = props;
   console.log(props, "in home");
 
   return {
@@ -32,9 +32,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-          <Header />
-          {children}
-          <Footer />
+        <Header />
+        {children}
+        <Footer />
       </body>
     </html>
   );
