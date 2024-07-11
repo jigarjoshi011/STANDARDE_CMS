@@ -9,6 +9,13 @@ import AvatarGrp from "../public/images/avtar-grp.png";
 import DesktopIcon from "../public/images/desktop.png";
 import StoreIcon from "../public/images/store.png";
 import ProductSlide from "../public/images/product_01.png";
+import Gridone from "../public/images/geidone.png";
+import Gridtwo from "../public/images/geidtwo.png";
+import Gridthree from "../public/images/gridthree.png";
+import Gridfour from "../public/images/gridfour.png";
+import Gridfive from "../public/images/gridsix.png";
+import Gridsix from "../public/images/store.png";
+import Grideight from "../public/images/shopping.png";
 import CartIcon from "../public/images/cart.png";
 import Button from "@/components/Button/Button";
 import dynamic from "next/dynamic";
@@ -187,7 +194,33 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <div className="flex">
+              <div className="w-1/4 px-4">
+                <div className="bg-white/5 border border-white/10 p-8 rounded-20px mb-5">
+                <div className="relative mx-auto text-center">
+                  <Image src={Gridone} alt="gridone" className="mx-auto mix-blend-screen"/>
+                  <div className="mt-5 leading-10">
+                    <span className="block text-white text-xl font-normal">Standanrde</span>
+                    <h5 className="uppercase text-40px font-bold">OS</h5>
+                  </div>
+                  </div>
+                  </div>
+                  <div className="bg-white/5 border border-white/10 p-8 rounded-20px">
+                <div className="relative mx-auto text-center">
+                <div className="relative mb-5">
+                    <span className="block text-[#505051] text-5xl font-bold">New</span>
+                    <h5 className="uppercase text-xl font-normal">Eco system</h5>
+                  </div>
+
+                  <Image src={Gridtwo} alt="gridone" className="mx-auto mix-blend-screen"/>
+                  
+                  </div>
+                  </div>
+              </div>
+              <div className="w-3/4 px-4"></div>
+            </div>
+
+            {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
               <div className="flex items-center space-x-4">
                 <Image src={osLogo} alt="OS" className="w-16 h-16" />
                 <div>
@@ -204,8 +237,8 @@ export default function Home() {
                   <p className="text-gray-400">Benefits for</p>
                 </div>
               </div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            </div> */}
+            {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
               <div>
                 <h3 className="text-xl font-bold mb-4">Standards</h3>
                 <p className="text-gray-400 mb-2">OS</p>
@@ -231,10 +264,10 @@ export default function Home() {
                   />
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
-          <div className="flex justify-center space-x-2">
+          {/* <div className="flex justify-center space-x-2">
             <span className="w-3 h-3 rounded-full bg-red-500"></span>
             <span className="w-3 h-3 rounded-full bg-orange-500"></span>
             <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
@@ -243,7 +276,7 @@ export default function Home() {
             <span className="w-3 h-3 rounded-full bg-indigo-500"></span>
             <span className="w-3 h-3 rounded-full bg-purple-500"></span>
             <span className="w-3 h-3 rounded-full bg-pink-500"></span>
-          </div>
+          </div> */}
         </section>
         {/* FOURTH SECTION */}
         <section className="text-white py-20 px-32 overflow-hidden">

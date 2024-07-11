@@ -22,3 +22,63 @@ body {
       #c22f7f 0%,
       #8329ca 100%);
 }
+/* grid */
+.angry-grid {
+  display: grid; 
+
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  
+  grid-template-areas: 
+ 'label0 label2 label2 label2 label2 label6 label6'
+ 'label0 label3 label3 label3 label3 label6 label6'
+ 'label1 label3 label3 label3 label3 label6 label6'
+ 'label1 label4 label4 label5 label5 label5 label5'
+ 'label1 label4 label4 label5 label5 label5 label5';
+  
+  gap: 20px;
+  height: 100%;
+  
+}
+ 
+#item-0 {
+
+  grid-area: label0;
+  
+}
+#item-1 {
+
+  background-color: #F9995E; 
+  grid-area: label1;
+  
+}
+#item-2 {
+
+  background-color: #5B7BAC; 
+  grid-area: label2;
+  
+}
+#item-3 {
+
+  background-color: #55F57B; 
+  grid-area: label3;
+  
+}
+#item-4 {
+
+  background-color: #9696DF; 
+  grid-area: label4;
+  
+}
+#item-5 {
+
+  background-color: #D965AF; 
+  grid-area: label5;
+  
+}
+#item-6 {
+
+  background-color: #5E9E6D; 
+  grid-area: label6;
+  
+}

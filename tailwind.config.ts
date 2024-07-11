@@ -79,7 +79,7 @@ const config: Config = {
         "0.96px": "0.96px",
       },
       borderRadius: {
-        '32px': '32px',
+        '20px': '20px',
         '40px': '40px',
       },
     },
