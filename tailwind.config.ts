@@ -27,6 +27,7 @@ const config: Config = {
         "bg-primary": "#03011B",
         "bg-second": "#111112",
         "bg-third": "#F3F3F3",
+        "card-bg": "#18181A",
         "text-primary": "#BBBBBB",
         "text-second": "#999999",
         "text-fourth": "#434343",
@@ -53,6 +54,7 @@ const config: Config = {
         "100px": "100px",
         "112px": "112px",
         "160px": "160px",
+        "348px": "348px",
         "580px": "580px",
         "100dvh": "100dvh",
         unset: "unset",
@@ -77,6 +79,7 @@ const config: Config = {
         "0.96px": "0.96px",
       },
       borderRadius: {
+        '32px': '32px',
         '40px': '40px',
       },
     },
