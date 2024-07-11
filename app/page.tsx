@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
-import { Settings } from "react-slick";
-import HeroImg from "../public/images/hero-img.png";
+import Slider, { Settings } from "react-slick";
 import heroSlider from "../public/images/hero-slider.png";
 import osLogo from "../public/images/os-logo.png";
 import barChart from "../public/images/bar-chart.svg";
@@ -17,9 +16,15 @@ import Gridfive from "../public/images/gridsix.png";
 import Gridsix from "../public/images/store.png";
 import Grideight from "../public/images/shopping.png";
 import CartIcon from "../public/images/cart.png";
+import ProductSlideImage1 from "../public/images/product_01.png";
+import ProductSlideImage2 from "../public/images/product_02.png";
+import ProductSlideImage4 from "../public/images/product_04.png";
+
 import Button from "@/components/Button/Button";
 import dynamic from "next/dynamic";
 import Head from "next/head";
+import HeroSection from "@/components/HeroSection/HeroSection";
+import FeatureList from "@/components/FeatureList/FeatureList";
 
 const AnimatedBackground = dynamic(
   () => import("@/components/AnimatedBackground/AnimatedBackground"),
@@ -35,6 +40,15 @@ export default function Home() {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+  };
+
+  const productSliderSettings: Settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 3,
     slidesToScroll: 1,
     arrows: false,
   };
@@ -86,98 +100,8 @@ export default function Home() {
         }}
       />
       <div>
-        {/* FIRST SECTION */}
-        <AnimatedBackground>
-          <section className="text-white min-h-screen flex pb-0 flex-col before:mix-blend-luminosity before:opacity-[0.4] justify-center items-center pt-160px py-16 relative  before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full z-0 before:z-[-1]  before:bg-bg-primary/30">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-76px text-text-primary xl:leading-79px font-bold mb-4 ">
-                Revolution of Retail Industry
-              </h1>
-              <p className="text-sm md:text-base mb-5 md:mb-10 xl:mb-70px text-text-second max-w-2xl mx-auto">
-                Pizza ipsum dolor meat lovers buffalo. Olives pineapple Chicago
-                pesto mayo rib ipsum melted sausage lovers. Large wing green
-                stuffed cr
-              </p>
-              <Button className="bg-btn-primary text-white px-6 py-3 rounded-full font-normal">
-                AI FOR THE RETAILERS
-              </Button>
-
-              <h2 className="text-2xl md:text-4xl xl:text-5xl font-bold mt-9 mb-4">
-                Generative AI Search
-              </h2>
-              <p className="text-sm md:text-base mb-10 text-text-second max-w-2xl mx-auto">
-                Pizza ipsum dolor meat lovers buffalo. Olives pineapple Chicago
-                pesto mayo rib ipsum melted sausage lovers. Large wing green
-                stuffed crust pan stuffed.
-              </p>
-              <div className="mx-auto overflow-hidden max-h-580px hero-img ">
-                <Image src={HeroImg} alt="hero-img" />
-              </div>
-            </div>
-          </section>
-        </AnimatedBackground>
-        {/* SECOND SECTION */}
-        <section className="text-white py-100px px-32 overflow-hidden">
-          <div className="container mx-auto">
-            <h2 className="text-32px text-text-primary font-semibold mb-12">
-              AI Search Feature list
-            </h2>
-            <CarouselComponent direction="horizontal" settings={settings}>
-              <div className="w-full h-full">
-                <div className="slider-container relative">
-                  <div className="slider flex transition-transform duration-300 ease-in-out">
-                    <div className="card h-[550px] flex-shrink-0 w-full bg-card-primary rounded-40px px-112px py-80px pb-0 mr-4 text-center">
-                      <div>
-                        <h3 className="text-28px font-semibold mb-2">
-                          Pizza ipsum dolor meat lovers buffalo. Marinara
-                          meatball pan hand large Philly large spinach. Pan
-                          white Chicago string.
-                        </h3>
-                        <div className="overflow-hidden mt-10">
-                          <Image
-                            src={heroSlider}
-                            alt="slider"
-                            className="mx-auto"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="w-full h-full">
-                <div className="slider-container relative">
-                  <div className="slider flex transition-transform duration-300 ease-in-out">
-                    <div className="card h-[550px] flex-shrink-0 w-full bg-bg-third rounded-40px px-112px py-80px pb-0 mr-4">
-                      <div className="flex items-center">
-                        <div className="relative w-1/2">
-                          <h3 className="text-28px font-medium leading-10 text-text-third mb-2">
-                            Pizza ipsum dolor meat lovers buffalo. Marinara
-                            meatball pan hand large Philly large.
-                          </h3>
-                          <p className="text-text-fourth text-base font-normal">
-                            Pizza ipsum dolor meat lovers buffalo. Olives
-                            pineapple Chicago pesto mayo rib ipsum melted
-                            sausage lovers. Large wing green stuffed crust pan
-                            stuffed. Extra pineapple chicken burnt party fresh.
-                          </p>
-                        </div>
-                        <div className="overflow-hidden mt-10 w-1/2">
-                          <Image
-                            src={heroSlider}
-                            alt="slider"
-                            className="mx-auto"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </CarouselComponent>
-          </div>
-        </section>
-        {/* THIRD SECTION */}
+        <HeroSection />
+        <FeatureList />
         <section className="text-white py-16 px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -194,33 +118,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="flex">
-              <div className="w-1/4 px-4">
-                <div className="bg-white/5 border border-white/10 p-8 rounded-20px mb-5">
-                <div className="relative mx-auto text-center">
-                  <Image src={Gridone} alt="gridone" className="mx-auto mix-blend-screen"/>
-                  <div className="mt-5 leading-10">
-                    <span className="block text-white text-xl font-normal">Standanrde</span>
-                    <h5 className="uppercase text-40px font-bold">OS</h5>
-                  </div>
-                  </div>
-                  </div>
-                  <div className="bg-white/5 border border-white/10 p-8 rounded-20px">
-                <div className="relative mx-auto text-center">
-                <div className="relative mb-5">
-                    <span className="block text-[#505051] text-5xl font-bold">New</span>
-                    <h5 className="uppercase text-xl font-normal">Eco system</h5>
-                  </div>
-
-                  <Image src={Gridtwo} alt="gridone" className="mx-auto mix-blend-screen"/>
-                  
-                  </div>
-                  </div>
-              </div>
-              <div className="w-3/4 px-4"></div>
-            </div>
-
-            {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
               <div className="flex items-center space-x-4">
                 <Image src={osLogo} alt="OS" className="w-16 h-16" />
                 <div>
@@ -237,7 +135,7 @@ export default function Home() {
                   <p className="text-gray-400">Benefits for</p>
                 </div>
               </div>
-            </div> */}
+            </div>
             {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
               <div>
                 <h3 className="text-xl font-bold mb-4">Standards</h3>
@@ -281,81 +179,127 @@ export default function Home() {
         {/* FOURTH SECTION */}
         <section className="text-white py-20 px-32 overflow-hidden">
           <div className="container mx-auto">
-            <h2 className="text-32px text-text-primary font-semibold mb-10">Our products</h2>
-            <div className="flex items-start">
-              <div className="w-1/4 px-2">
-                  <div className="bg-card-bg p-8 pb-0 rounded-32px">
-                    <div className="flex items-center justify-between">
-                      <div className="relative">
-                      <span className="uppercase text-base font-normal block">STANDARDE</span>
+            <h2 className="text-32px text-text-primary font-semibold mb-10">
+              Our products
+            </h2>
+            <Slider {...productSliderSettings}>
+              <div className="w-1/3 px-2">
+                <div className="bg-card-bg p-8 pb-0 rounded-32px">
+                  <div className="flex items-center justify-between">
+                    <div className="relative">
+                      <span className="uppercase text-base font-normal block">
+                        STANDARDE
+                      </span>
                       <h5 className="text-xl font-semibold">HIGHLIGHT</h5>
-                      </div>
-                      <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center">
-                      <svg className="w-2 h-3.5 fill-white" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.575638 0.575638C0.809953 0.341324 1.18985 0.341324 1.42417 0.575638L7.42417 6.57564C7.65848 6.80995 7.65848 7.18985 7.42417 7.42417L1.42417 13.4242C1.18985 13.6585 0.809953 13.6585 0.575638 13.4242C0.341324 13.1899 0.341324 12.81 0.575638 12.5756L6.15137 6.9999L0.575638 1.42417C0.341324 1.18985 0.341324 0.809953 0.575638 0.575638Z" />
-                        </svg>
-                      </div>
                     </div>
-                    <div className="relative mt-16">
-                      <Image src={ProductSlide} alt="ProductSlide"/>
+                    <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center">
+                      <svg
+                        className="w-2 h-3.5 fill-white"
+                        viewBox="0 0 8 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          d="M0.575638 0.575638C0.809953 0.341324 1.18985 0.341324 1.42417 0.575638L7.42417 6.57564C7.65848 6.80995 7.65848 7.18985 7.42417 7.42417L1.42417 13.4242C1.18985 13.6585 0.809953 13.6585 0.575638 13.4242C0.341324 13.1899 0.341324 12.81 0.575638 12.5756L6.15137 6.9999L0.575638 1.42417C0.341324 1.18985 0.341324 0.809953 0.575638 0.575638Z"
+                        />
+                      </svg>
                     </div>
                   </div>
+                  <div className="relative mt-16">
+                    <Image src={ProductSlideImage1} alt="ProductSlide" />
+                  </div>
+                </div>
               </div>
-              <div className="w-1/4 px-2">
-                  <div className="bg-card-bg p-8 pb-0 rounded-32px">
-                    <div className="flex items-center justify-between">
-                      <div className="relative">
-                      <span className="uppercase text-base font-normal block">STANDARDE</span>
-                      <h5 className="text-xl font-semibold">HIGHLIGHT</h5>
-                      </div>
-                      <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center">
-                      <svg className="w-2 h-3.5 fill-white" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.575638 0.575638C0.809953 0.341324 1.18985 0.341324 1.42417 0.575638L7.42417 6.57564C7.65848 6.80995 7.65848 7.18985 7.42417 7.42417L1.42417 13.4242C1.18985 13.6585 0.809953 13.6585 0.575638 13.4242C0.341324 13.1899 0.341324 12.81 0.575638 12.5756L6.15137 6.9999L0.575638 1.42417C0.341324 1.18985 0.341324 0.809953 0.575638 0.575638Z" />
-                        </svg>
-                      </div>
+              <div className="w-1/3 px-2">
+                <div className="bg-card-bg p-8 pb-0 rounded-32px">
+                  <div className="flex items-center justify-between">
+                    <div className="relative">
+                      <span className="uppercase text-base font-normal block">
+                        STANDARDE
+                      </span>
+                      <h5 className="text-xl font-semibold"> POS platforms.</h5>
                     </div>
-                    <div className="relative mt-16">
-                      <Image src={ProductSlide} alt="ProductSlide"/>
+                    <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center">
+                      <svg
+                        className="w-2 h-3.5 fill-white"
+                        viewBox="0 0 8 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          d="M0.575638 0.575638C0.809953 0.341324 1.18985 0.341324 1.42417 0.575638L7.42417 6.57564C7.65848 6.80995 7.65848 7.18985 7.42417 7.42417L1.42417 13.4242C1.18985 13.6585 0.809953 13.6585 0.575638 13.4242C0.341324 13.1899 0.341324 12.81 0.575638 12.5756L6.15137 6.9999L0.575638 1.42417C0.341324 1.18985 0.341324 0.809953 0.575638 0.575638Z"
+                        />
+                      </svg>
                     </div>
                   </div>
+                  <div className="relative mt-16">
+                    <Image src={ProductSlideImage2} alt="ProductSlide" />
+                  </div>
+                </div>
               </div>
-              <div className="w-1/4 px-2">
-                  <div className="bg-card-bg p-8 pb-0 rounded-32px">
-                    <div className="flex items-center justify-between">
-                      <div className="relative">
-                      <span className="uppercase text-base font-normal block">STANDARDE</span>
-                      <h5 className="text-xl font-semibold">HIGHLIGHT</h5>
-                      </div>
-                      <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center">
-                      <svg className="w-2 h-3.5 fill-white" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.575638 0.575638C0.809953 0.341324 1.18985 0.341324 1.42417 0.575638L7.42417 6.57564C7.65848 6.80995 7.65848 7.18985 7.42417 7.42417L1.42417 13.4242C1.18985 13.6585 0.809953 13.6585 0.575638 13.4242C0.341324 13.1899 0.341324 12.81 0.575638 12.5756L6.15137 6.9999L0.575638 1.42417C0.341324 1.18985 0.341324 0.809953 0.575638 0.575638Z" />
-                        </svg>
-                      </div>
+              <div className="w-1/3 px-2">
+                <div className="bg-card-bg p-8 pb-0 rounded-32px">
+                  <div className="flex items-center justify-between">
+                    <div className="relative">
+                      <span className="uppercase text-base font-normal block">
+                        STANDARDE
+                      </span>
+                      <h5 className="text-xl font-semibold">ERP platforms.</h5>
                     </div>
-                    <div className="relative mt-16">
-                      <Image src={ProductSlide} alt="ProductSlide"/>
+                    <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center">
+                      <svg
+                        className="w-2 h-3.5 fill-white"
+                        viewBox="0 0 8 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          d="M0.575638 0.575638C0.809953 0.341324 1.18985 0.341324 1.42417 0.575638L7.42417 6.57564C7.65848 6.80995 7.65848 7.18985 7.42417 7.42417L1.42417 13.4242C1.18985 13.6585 0.809953 13.6585 0.575638 13.4242C0.341324 13.1899 0.341324 12.81 0.575638 12.5756L6.15137 6.9999L0.575638 1.42417C0.341324 1.18985 0.341324 0.809953 0.575638 0.575638Z"
+                        />
+                      </svg>
                     </div>
                   </div>
+                  <div className="relative mt-16">
+                    <Image src={ProductSlideImage1} alt="ProductSlide" />
+                  </div>
+                </div>
               </div>
-              <div className="w-1/4 px-2">
-                  <div className="bg-card-bg p-8 pb-0 rounded-32px">
-                    <div className="flex items-center justify-between">
-                      <div className="relative">
-                      <span className="uppercase text-base font-normal block">STANDARDE</span>
-                      <h5 className="text-xl font-semibold">HIGHLIGHT</h5>
-                      </div>
-                      <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center">
-                      <svg className="w-2 h-3.5 fill-white" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.575638 0.575638C0.809953 0.341324 1.18985 0.341324 1.42417 0.575638L7.42417 6.57564C7.65848 6.80995 7.65848 7.18985 7.42417 7.42417L1.42417 13.4242C1.18985 13.6585 0.809953 13.6585 0.575638 13.4242C0.341324 13.1899 0.341324 12.81 0.575638 12.5756L6.15137 6.9999L0.575638 1.42417C0.341324 1.18985 0.341324 0.809953 0.575638 0.575638Z" />
-                        </svg>
-                      </div>
+              <div className="w-1/3 px-2">
+                <div className="bg-card-bg p-8 pb-0 rounded-32px">
+                  <div className="flex items-center justify-between">
+                    <div className="relative">
+                      <span className="uppercase text-base font-normal block">
+                        STANDARDE
+                      </span>
+                      <h5 className="text-xl font-semibold">PARTNER</h5>
                     </div>
-                    <div className="relative mt-16">
-                      <Image src={ProductSlide} alt="ProductSlide"/>
+                    <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center">
+                      <svg
+                        className="w-2 h-3.5 fill-white"
+                        viewBox="0 0 8 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          d="M0.575638 0.575638C0.809953 0.341324 1.18985 0.341324 1.42417 0.575638L7.42417 6.57564C7.65848 6.80995 7.65848 7.18985 7.42417 7.42417L1.42417 13.4242C1.18985 13.6585 0.809953 13.6585 0.575638 13.4242C0.341324 13.1899 0.341324 12.81 0.575638 12.5756L6.15137 6.9999L0.575638 1.42417C0.341324 1.18985 0.341324 0.809953 0.575638 0.575638Z"
+                        />
+                      </svg>
                     </div>
                   </div>
+                  <div className="relative mt-16">
+                    <Image src={ProductSlideImage4} alt="ProductSlide" />
+                  </div>
+                </div>
               </div>
-            </div>
+            </Slider>
           </div>
         </section>
         {/* FIFTH SECTION */}
@@ -375,9 +319,18 @@ export default function Home() {
                       "Plug & Play API",
                     ].map((item, index) => (
                       <li key={index} className="flex items-center   gap-2">
-                        <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.5 0.5C5.21442 0.5 3.95772 0.881218 2.8888 1.59545C1.81988 2.30968 0.986756 3.32484 0.494786 4.51256C0.00281635 5.70028 -0.125905 7.00721 0.124899 8.26809C0.375703 9.52896 0.994767 10.6872 1.90381 11.5962C2.81285 12.5052 3.97104 13.1243 5.23192 13.3751C6.49279 13.6259 7.79972 13.4972 8.98744 13.0052C10.1752 12.5132 11.1903 11.6801 11.9046 10.6112C12.6188 9.54229 13 8.28558 13 7C12.9982 5.27665 12.3128 3.62441 11.0942 2.40582C9.87559 1.18722 8.22335 0.50182 6.5 0.5ZM9.35375 5.85375L5.85375 9.35375C5.80732 9.40024 5.75217 9.43712 5.69147 9.46228C5.63077 9.48744 5.56571 9.50039 5.5 9.50039C5.43429 9.50039 5.36923 9.48744 5.30853 9.46228C5.24783 9.43712 5.19269 9.40024 5.14625 9.35375L3.64625 7.85375C3.55243 7.75993 3.49972 7.63268 3.49972 7.5C3.49972 7.36732 3.55243 7.24007 3.64625 7.14625C3.74007 7.05243 3.86732 6.99972 4 6.99972C4.13268 6.99972 4.25993 7.05243 4.35375 7.14625L5.5 8.29312L8.64625 5.14625C8.69271 5.09979 8.74786 5.06294 8.80855 5.0378C8.86925 5.01266 8.93431 4.99972 9 4.99972C9.0657 4.99972 9.13075 5.01266 9.19145 5.0378C9.25215 5.06294 9.3073 5.09979 9.35375 5.14625C9.40021 5.1927 9.43706 5.24786 9.4622 5.30855C9.48734 5.36925 9.50028 5.4343 9.50028 5.5C9.50028 5.5657 9.48734 5.63075 9.4622 5.69145C9.43706 5.75214 9.40021 5.80729 9.35375 5.85375Z" fill="white"/>
-</svg>
+                        <svg
+                          width="13"
+                          height="14"
+                          viewBox="0 0 13 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.5 0.5C5.21442 0.5 3.95772 0.881218 2.8888 1.59545C1.81988 2.30968 0.986756 3.32484 0.494786 4.51256C0.00281635 5.70028 -0.125905 7.00721 0.124899 8.26809C0.375703 9.52896 0.994767 10.6872 1.90381 11.5962C2.81285 12.5052 3.97104 13.1243 5.23192 13.3751C6.49279 13.6259 7.79972 13.4972 8.98744 13.0052C10.1752 12.5132 11.1903 11.6801 11.9046 10.6112C12.6188 9.54229 13 8.28558 13 7C12.9982 5.27665 12.3128 3.62441 11.0942 2.40582C9.87559 1.18722 8.22335 0.50182 6.5 0.5ZM9.35375 5.85375L5.85375 9.35375C5.80732 9.40024 5.75217 9.43712 5.69147 9.46228C5.63077 9.48744 5.56571 9.50039 5.5 9.50039C5.43429 9.50039 5.36923 9.48744 5.30853 9.46228C5.24783 9.43712 5.19269 9.40024 5.14625 9.35375L3.64625 7.85375C3.55243 7.75993 3.49972 7.63268 3.49972 7.5C3.49972 7.36732 3.55243 7.24007 3.64625 7.14625C3.74007 7.05243 3.86732 6.99972 4 6.99972C4.13268 6.99972 4.25993 7.05243 4.35375 7.14625L5.5 8.29312L8.64625 5.14625C8.69271 5.09979 8.74786 5.06294 8.80855 5.0378C8.86925 5.01266 8.93431 4.99972 9 4.99972C9.0657 4.99972 9.13075 5.01266 9.19145 5.0378C9.25215 5.06294 9.3073 5.09979 9.35375 5.14625C9.40021 5.1927 9.43706 5.24786 9.4622 5.30855C9.48734 5.36925 9.50028 5.4343 9.50028 5.5C9.50028 5.5657 9.48734 5.63075 9.4622 5.69145C9.43706 5.75214 9.40021 5.80729 9.35375 5.85375Z"
+                            fill="white"
+                          />
+                        </svg>
 
                         <span className="text-sm">{item}</span>
                       </li>
@@ -387,22 +340,36 @@ export default function Home() {
                     href="#"
                     className="inline-flex items-center px-6 py-3 border border-white rounded-full text-base font-medium hover:bg-white hover:text-black transition-colors duration-300"
                   >
-                    Contact Us
-                    <svg className="fill-white w-3 h-3 ml-3.5" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M11.4242 0.575638C11.6585 0.809953 11.6585 1.18985 11.4242 1.42417L1.42417 11.4242C1.18985 11.6585 0.809953 11.6585 0.575638 11.4242C0.341324 11.1899 0.341324 10.81 0.575638 10.5756L10.5756 0.575638C10.81 0.341324 11.1899 0.341324 11.4242 0.575638Z" fill="white"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0.399902 0.999902C0.399902 0.668532 0.668532 0.399902 0.999902 0.399902H10.9999C11.3313 0.399902 11.5999 0.668532 11.5999 0.999902V10.9999C11.5999 11.3313 11.3313 11.5999 10.9999 11.5999C10.6685 11.5999 10.3999 11.3313 10.3999 10.9999V1.5999H0.999902C0.668532 1.5999 0.399902 1.33127 0.399902 0.999902Z" fill="white"/>
-</svg>
-
+                    Try for Free
+                    <svg
+                      className="fill-white w-3 h-3 ml-3.5"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M11.4242 0.575638C11.6585 0.809953 11.6585 1.18985 11.4242 1.42417L1.42417 11.4242C1.18985 11.6585 0.809953 11.6585 0.575638 11.4242C0.341324 11.1899 0.341324 10.81 0.575638 10.5756L10.5756 0.575638C10.81 0.341324 11.1899 0.341324 11.4242 0.575638Z"
+                        fill="white"
+                      />
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M0.399902 0.999902C0.399902 0.668532 0.668532 0.399902 0.999902 0.399902H10.9999C11.3313 0.399902 11.5999 0.668532 11.5999 0.999902V10.9999C11.5999 11.3313 11.3313 11.5999 10.9999 11.5999C10.6685 11.5999 10.3999 11.3313 10.3999 10.9999V1.5999H0.999902C0.668532 1.5999 0.399902 1.33127 0.399902 0.999902Z"
+                        fill="white"
+                      />
+                    </svg>
                   </a>
                 </div>
 
                 <div className="w-full lg:w-1/2 flex items-center z-10">
-                <div className="max-h-348px h-348px">
-                  <Image
-                    src={heroSlider}
-                    alt="hero-mg"
-                    className="w-full h-full"
-                  />
+                  <div className="max-h-348px h-348px">
+                    <Image
+                      src={heroSlider}
+                      alt="hero-mg"
+                      className="w-full h-full"
+                    />
                   </div>
                 </div>
               </div>
