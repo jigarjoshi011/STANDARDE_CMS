@@ -5,12 +5,14 @@ import Button from "../Button/Button";
 import Image from "next/image";
 
 // Components
-import AnimatedBackground from "../AnimatedBackground/AnimatedBackground";
+import WaveAnimation from "../WaveAnimation/WaveAnimation";
 
 const HeroSection = () => {
   return (
-    <AnimatedBackground>
+    <>
       <section className="text-white min-h-screen flex pb-0 flex-col before:mix-blend-luminosity before:opacity-[0.4] justify-center items-center pt-160px py-16 relative  before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full z-0 before:z-[-1]  before:bg-bg-primary/30">
+        <WaveAnimation />
+
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-76px text-text-primary xl:leading-79px font-bold mb-4 ">
             Revolution of Retail Industry
@@ -37,7 +39,7 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
-    </AnimatedBackground>
+    </>
   );
 };
 

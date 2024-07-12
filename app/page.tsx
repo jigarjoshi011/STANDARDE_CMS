@@ -21,18 +21,10 @@ import ProductSlideImage2 from "../public/images/product_02.png";
 import ProductSlideImage4 from "../public/images/product_04.png";
 
 import Button from "@/components/Button/Button";
-import dynamic from "next/dynamic";
 import Head from "next/head";
 import HeroSection from "@/components/HeroSection/HeroSection";
 import FeatureList from "@/components/FeatureList/FeatureList";
 
-const AnimatedBackground = dynamic(
-  () => import("@/components/AnimatedBackground/AnimatedBackground"),
-  { ssr: false }
-);
-const CarouselComponent = dynamic(() => import("@/components/Slider/Slider"), {
-  ssr: false,
-});
 
 export default function Home() {
   const settings: Settings = {
