@@ -117,8 +117,99 @@ export default function Home() {
                 engaging experiences that win loyalty.
               </p>
             </div>
+            <div className="l-ContentColumn">
+            <div className="main-container gap-5">
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+              <div className="number-state bg-white/5 border border-white/10 p-8 rounded-20px">
+              <Image src={Gridone} className=""/>
+              <div className="text-center mt-5">
+                <span className="text-xl font-normal text-white">Standanrde</span>
+                <h5 className="uppercase text-40px font-bold text-white leading-snug">OS</h5>
+              </div>
+              </div>
+              <div className="number-state bg-white/5 border border-white/10 p-8 rounded-20px ">
+              <div className="flex justify-between items-center">
+                  <div className="relative">
+                  <h5 className="text-80px text-text-fifth font-bold leading-none">2.5x</h5>
+                  <span>Growth</span>
+                  </div>
+                  <div className="relative">
+                  <Image src={Gridthree} alt="gridthree"/>
+                  </div>
+                  </div>
+              </div>
+              <div className="number-state bg-white/5 border border-white/10 p-8 rounded-20px">
+              <div className="relative flex items-end gap-4">
+                  <h5 className="text-80px text-text-fifth font-bold leading-none">2.5x</h5>
+                  <span>Benefits for</span>
+                  </div>
+                  <div className="flex gap-5 mt-[114px]">
+                    <div className="bg-bg-second rounded-xl p-6 text-center">
+                      <div className="h-28">
+                      <Image src={Gridsix} alt="Gridsix" className="w-full h-full object-cover"/>
+                      </div>
+                      <h6 className="text-white text-xl font-medium">Store</h6>
+                    </div>
+                    <div className="bg-bg-second rounded-xl p-6 text-center">
+                    <div className="h-28">
+                      <Image src={Grideight} alt="Gridsix" className="w-full h-full object-cover"/>
+                      </div>
+                      <h6 className="text-white text-xl font-medium">Customer</h6>
+                    </div>
+                  </div>
+              </div>
+              <div className="number-state bg-white/5 border border-white/10 p-8number-state bg-white/5 border border-white/10 p-8 rounded-20px align-super flex-wrap rounded-20px flex flex-wrap justify-between">
+              <div className="relative text-center w-full">
+                  <h5 className="text-52px text-text-fifth font-bold leading-3.25rem">New</h5>
+                  <span>Eco system</span>
+                  </div>
+                  <Image src={Gridtwo} alt="gridtwo" className="w-full object-cover"/>
+                 
+              </div>
+              <div className="number-state bg-white/5 border border-white/10 p-0 rounded-20px overflow-hidden">
+              <div className="relative w-full h-full">
+                  <Image src={Gridfour} alt="public-shop" className="w-full h-full object-cover"/>
+                </div>
+                </div>
+              <div className="number-state bg-white/5 pb-0 border border-white/10 p-8 rounded-20px align-super flex-wrap">
+              <div className="relative block w-full"><h5>Foot fall</h5></div>
+              <div className="relative w-full ml-2">
+              <Image  src={Gridfive} alt="Gridfive" className="ml-auto"/>
+              </div>
+              </div>
+              <div className="number-state bg-white/5 border border-white/10 p-8 rounded-20px flex  flex-wrap ">
+              <div className="relative block w-full max-w-40 "><h5>Unified segment accross platforms.</h5></div>
+              <div className="flex items-center  w-full justify-end"><div className="w-6 h-6 rounded-full bg-red-600"></div></div>
+              </div>
+            
+            </div>
+            </div>
+            {/* <div className="flex">
+              <div className="w-1/4 px-4">
+                <div className="bg-white/5 border border-white/10 p-8 rounded-20px mb-5">
+                <div className="relative mx-auto text-center">
+                  <Image src={Gridone} alt="gridone" className="mx-auto mix-blend-screen"/>
+                  <div className="mt-5 leading-10">
+                    <span className="block text-white text-xl font-normal">Standanrde</span>
+                    <h5 className="uppercase text-40px font-bold">OS</h5>
+                  </div>
+                  </div>
+                  </div>
+                  <div className="bg-white/5 border border-white/10 p-8 rounded-20px">
+                <div className="relative mx-auto text-center">
+                <div className="relative mb-5">
+                    <span className="block text-[#505051] text-5xl font-bold">New</span>
+                    <h5 className="uppercase text-xl font-normal">Eco system</h5>
+                  </div>
+
+                  <Image src={Gridtwo} alt="gridone" className="mx-auto mix-blend-screen"/>
+
+                  </div>
+                  </div>
+              </div>
+              <div className="w-3/4 px-4"></div>
+            </div> */}
+            {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
               <div className="flex items-center space-x-4">
                 <Image src={osLogo} alt="OS" className="w-16 h-16" />
                 <div>
@@ -135,7 +226,7 @@ export default function Home() {
                   <p className="text-gray-400">Benefits for</p>
                 </div>
               </div>
-            </div>
+            </div> */}
             {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
               <div>
                 <h3 className="text-xl font-bold mb-4">Standards</h3>
@@ -184,7 +275,7 @@ export default function Home() {
             </h2>
             <Slider {...productSliderSettings}>
               <div className="w-1/3 px-2">
-                <div className="bg-card-bg p-8 pb-0 rounded-32px">
+                <div className="bg-card-bg p-8 pb-0 rounded-32px max-h-560px">
                   <div className="flex items-center justify-between">
                     <div className="relative">
                       <span className="uppercase text-base font-normal block">
@@ -208,12 +299,12 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="relative mt-16">
-                    <Image src={ProductSlideImage1} alt="ProductSlide" />
+                    <Image src={ProductSlideImage1} alt="ProductSlide" className="mx-auto w-full" />
                   </div>
                 </div>
               </div>
               <div className="w-1/3 px-2">
-                <div className="bg-card-bg p-8 pb-0 rounded-32px">
+                <div className="bg-card-bg p-8 pb-0 rounded-32px max-h-560px">
                   <div className="flex items-center justify-between">
                     <div className="relative">
                       <span className="uppercase text-base font-normal block">
@@ -237,12 +328,12 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="relative mt-16">
-                    <Image src={ProductSlideImage2} alt="ProductSlide" />
+                    <Image src={ProductSlideImage2} alt="ProductSlide" className="mx-auto w-full" />
                   </div>
                 </div>
               </div>
               <div className="w-1/3 px-2">
-                <div className="bg-card-bg p-8 pb-0 rounded-32px">
+                <div className="bg-card-bg p-8 pb-0 rounded-32px max-h-560px">
                   <div className="flex items-center justify-between">
                     <div className="relative">
                       <span className="uppercase text-base font-normal block">
@@ -266,12 +357,12 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="relative mt-16">
-                    <Image src={ProductSlideImage1} alt="ProductSlide" />
+                    <Image src={ProductSlideImage1} alt="ProductSlide" className="mx-auto w-full" />
                   </div>
                 </div>
               </div>
               <div className="w-1/3 px-2">
-                <div className="bg-card-bg p-8 pb-0 rounded-32px">
+                <div className="bg-card-bg p-8 pb-0 rounded-32px max-h-560px">
                   <div className="flex items-center justify-between">
                     <div className="relative">
                       <span className="uppercase text-base font-normal block">
@@ -295,7 +386,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="relative mt-16">
-                    <Image src={ProductSlideImage4} alt="ProductSlide" />
+                    <Image src={ProductSlideImage4} alt="ProductSlide" className="mx-auto w-full" />
                   </div>
                 </div>
               </div>
