@@ -25,7 +25,6 @@ import Head from "next/head";
 import HeroSection from "@/components/HeroSection/HeroSection";
 import FeatureList from "@/components/FeatureList/FeatureList";
 
-
 export default function Home() {
   const settings: Settings = {
     dots: true,
@@ -202,7 +201,16 @@ export default function Home() {
                     <h5>Unified segment accross platforms.</h5>
                   </div>
                   <div className="flex items-center  w-full justify-end">
-                    <div className="w-6 h-6 rounded-full bg-red-600"></div>
+                    <div className="flex justify-center space-x-6">
+                      <span className="w-6 h-6 rounded-full bg-red-500"></span>
+                      <span className="w-6 h-6 rounded-full bg-orange-500"></span>
+                      <span className="w-6 h-6 rounded-full bg-yellow-500"></span>
+                      <span className="w-6 h-6 rounded-full bg-green-500"></span>
+                      <span className="w-6 h-6 rounded-full bg-blue-500"></span>
+                      <span className="w-6 h-6 rounded-full bg-indigo-500"></span>
+                      <span className="w-6 h-6 rounded-full bg-purple-500"></span>
+                      <span className="w-6 h-6 rounded-full bg-pink-500"></span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -446,7 +454,6 @@ export default function Home() {
                       "Free Trial",
                       "Consult API Expert",
                       "Robust Customer Support",
-                      "Plug & Play API",
                     ].map((item, index) => (
                       <li key={index} className="flex items-center   gap-2">
                         <svg
@@ -498,7 +505,7 @@ export default function Home() {
                     <Image
                       src={heroSlider}
                       alt="hero-mg"
-                      className="w-full h-full"
+                      className="w-full h-full rounded-t-2xl"
                     />
                   </div>
                 </div>

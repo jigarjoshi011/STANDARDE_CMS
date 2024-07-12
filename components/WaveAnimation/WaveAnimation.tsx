@@ -4,7 +4,6 @@ import * as THREE from "three";
 const WaveAnimation: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
-
   useEffect(() => {
     if (typeof window === "undefined" || !containerRef.current) return;
 
@@ -31,7 +30,7 @@ const WaveAnimation: React.FC = () => {
     )
       return;
 
-    const SEPARATION = 15;
+    const SEPARATION = 14;
     const AMOUNTX = Math.round(dimensions.width / SEPARATION);
     const AMOUNTY = Math.round(dimensions.height / SEPARATION);
 
@@ -107,6 +106,7 @@ const WaveAnimation: React.FC = () => {
       }
       particles.geometry.attributes.position.needsUpdate = true;
       renderer.render(scene, camera);
+      console.log("count", count);
       count += 0.018;
     };
 
