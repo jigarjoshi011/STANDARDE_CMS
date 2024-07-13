@@ -50,6 +50,7 @@ const config: Config = {
       },
 
       spacing: {
+        "30rem": "30rem",
         "70px": "70px",
         "80px": "80px",
         "100px": "100px",

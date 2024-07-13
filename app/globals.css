@@ -82,20 +82,23 @@ body {
   grid-area: label6;
   
 }
-
-.l-ContentColumn {
-  width: 100%;
-  max-width: 1125px;
-  margin: 0 auto;
-  /* margin-top: -125px; */
-}
 .main-container {
-  display: grid;
-  width: 100%;
-  position: relative;
-  padding-bottom: 10vh;
-  padding: 0px;
   grid-template-columns: 18% 14% 14% 12% 25%;
+}
+@media only screen and (max-width: 1024px) {
+  .main-container {
+    grid-template-columns: unset !important;
+  }
+  .number-state{
+    width: 50%;
+    padding: 15px;
+  }
+}
+@media only screen and (max-width: 767px){
+  .number-state{
+    width: 100%;
+    padding: 10px;
+  }
 }
 .number-state:nth-of-type(1) {
   grid-column: 1 / 2;
@@ -185,4 +188,7 @@ body {
   font-size: 42px;
   line-height: 24px;
   color: white;
+}
+.slider-slick-swiper .slick-slide{
+ @apply px-4;
 }

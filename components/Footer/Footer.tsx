@@ -3,11 +3,11 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="text-white py-6">
-      <div className="container mx-auto px-32">
+      <div className="container mx-auto px-5 md:px-8 lg:px-16 xl:px-32">
         <div className="flex flex-col space-y-6 sm:space-y-0 sm:flex-row sm:justify-between sm:items-start">
-          <div className="flex flex-col items-center sm:items-start space-y-8">
+          <div className="flex flex-col items-start md:items-center sm:items-start space-y-4 md:space-y-8">
             <h2 className="text-2xl font-bold">STANDARDE</h2>
-            <div className="flex space-x-6">
+            <div className="flex space-x-4 md:space-x-6">
               <a
                 href="#"
                 className="hover:text-gray-400 transition-colors duration-300"
@@ -74,8 +74,8 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <div className="text-sm text-center sm:text-right">
-            <div className="flex items-center justify-center sm:justify-end mb-2">
+          <div className="text-sm text-left md:text-center sm:text-right">
+            <div className="flex items-center justify-start md:justify-center sm:justify-end mb-2">
               <svg
                 className="w-4 h-4 mr-2"
                 fill="none"
@@ -92,7 +92,7 @@ const Footer = () => {
               </svg>
               <a href="#" className="text-footer-primary/40 transition-all ease-in-out duration-300 hover:text-footer-primary text-lg font-normal ">+1 516-342-XXXX</a>
             </div>
-            <div className="flex items-center justify-center sm:justify-end">
+            <div className="flex items-center justify-start md:justify-center sm:justify-end">
               <svg
                 className="w-4 h-4 mr-2"
                 fill="none"
@@ -111,7 +111,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="mt-10 py-6  border-t border-white/20  flex flex-col sm:flex-row justify-between items-center">
+        <div className="mt-10 py-6 hidden  border-t border-white/20  md:flex flex-col sm:flex-row justify-between items-center">
           <div className="mb-4 sm:mb-0 text-center sm:text-left">
             <ul className="flex items-center ">
               <li><a href="#" className="text-footer-primary/60 hover:text-footer-primary">

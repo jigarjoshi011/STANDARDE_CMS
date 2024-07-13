@@ -39,9 +39,44 @@ export default function Home() {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     arrows: false,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
   return (
     <>
@@ -93,7 +128,7 @@ export default function Home() {
       <div>
         <HeroSection />
         <FeatureList />
-        <section className="text-white py-16 px-4">
+        <section className="text-white py-6 md:py-10 xl:py-16 px-5">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <Button className="bg-btn-primary text-white px-6 py-3 rounded-full font-normal">
@@ -108,10 +143,11 @@ export default function Home() {
                 engaging experiences that win loyalty.
               </p>
             </div>
-            <div className="l-ContentColumn">
-              <div className="main-container gap-5">
-                <div className="number-state bg-white/5 border border-white/10 p-8 rounded-20px">
-                  <Image src={Gridone} className="" alt="ge-1" />
+            <div className="l-ContentColumn w-full max-w-full xl:max-w-[1125px] mx-auto px-5 md:px-14 lg:px-0">
+              <div className="main-container flex flex-wrap lg:grid w-full relative lg:gap-5">
+                <div className="number-state">
+                <div className=" bg-white/5 w-full h-full border border-white/10 p-8 rounded-20px">
+                  <Image src={Gridone} className="mx-auto" alt="ge-1" />
                   <div className="text-center mt-5">
                     <span className="text-xl font-normal text-white">
                       Standanrde
@@ -121,65 +157,76 @@ export default function Home() {
                     </h5>
                   </div>
                 </div>
-                <div className="number-state bg-white/5 border border-white/10 p-8 rounded-20px ">
-                  <div className="flex justify-between items-center">
+                </div>
+                <div className="number-state">
+                <div className=" bg-white/5 w-full h-full border border-white/10 p-8 rounded-20px ">
+                  <div className="flex justify-between items-center flex-wrap">
                     <div className="relative">
                       <h5 className="text-80px text-text-fifth font-bold leading-none">
                         2.5x
                       </h5>
                       <span>Growth</span>
                     </div>
-                    <div className="relative">
-                      <Image src={Gridthree} alt="gridthree" />
+                    <div className="relative w-full lg:w-unset mt-8 lg:mt-0">
+                      <Image src={Gridthree} alt="gridthree" className="mx-auto" />
                     </div>
                   </div>
                 </div>
-                <div className="number-state bg-white/5 border border-white/10 p-8 rounded-20px">
-                  <div className="relative flex items-end gap-4">
+                </div>
+                <div className="number-state !w-full">
+                <div className=" bg-white/5 w-full h-full border border-white/10 p-8 rounded-20px">
+                  <div className="relative ">
                     <h5 className="text-80px text-text-fifth font-bold leading-none">
                       2.5x
                     </h5>
                     <span>Benefits for</span>
                   </div>
-                  <div className="flex gap-5 mt-[114px]">
-                    <div className="bg-bg-second rounded-xl p-6 text-center">
-                      <div className="h-28">
+                  <div className="flex gap-5 mt-10 flex-wrap lg:flex-nowrap lg:mt-[114px]">
+                    <div className="bg-bg-second w-full lg:w-unset rounded-xl p-6 text-center space-y-2 lg:space-y-0">
+                      <div className="w-16 lg:w-unset h-16 mx-auto lg:h-28">
                         <Image
                           src={Gridsix}
                           alt="Gridsix"
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      <h6 className="text-white text-xl font-medium">Store</h6>
+                      <h6 className="text-white text-base lg:text-xl font-medium">Store</h6>
                     </div>
-                    <div className="bg-bg-second rounded-xl p-6 text-center">
-                      <div className="h-28">
+                    <div className="bg-bg-second w-full lg:w-unset rounded-xl p-6 text-center space-y-2 lg:space-y-0">
+                      <div className="w-16 lg:w-unset h-16 mx-auto lg:h-28">
                         <Image
                           src={Grideight}
                           alt="Gridsix"
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      <h6 className="text-white text-xl font-medium">
+                      <h6 className="text-white text-base lg:text-xl font-medium">
                         Customer
                       </h6>
                     </div>
                   </div>
                 </div>
-                <div className="number-state bg-white/5 border border-white/10 p-8number-state bg-white/5 border border-white/10 p-8 rounded-20px align-super flex-wrap rounded-20px flex flex-wrap justify-between">
+                </div>
+                <div className="number-state">
+                <div className=" bg-white/5 w-full h-full border border-white/10 p-8 pb-5 rounded-20px">
                   <div className="relative text-center w-full">
                     <h5 className="text-52px text-text-fifth font-bold leading-3.25rem">
                       New
                     </h5>
                     <span>Eco system</span>
                   </div>
+                  <div className="h-24 mt-4 lg:mt-0 lg:h-full">
                   <Image
                     src={Gridtwo}
                     alt="gridtwo"
-                    className="w-full object-cover"
+                    className="w-full h-full content-end object-contain"
                   />
+                  </div>
+                  
                 </div>
-                <div className="number-state bg-white/5 border border-white/10 p-0 rounded-20px overflow-hidden">
+                </div>
+                <div className="number-state ">
+                <div className=" bg-white/5 w-full h-full border border-white/10 p-0 rounded-20px overflow-hidden">
                   <div className="relative w-full h-full">
                     <Image
                       src={Gridfour}
@@ -188,30 +235,35 @@ export default function Home() {
                     />
                   </div>
                 </div>
-                <div className="number-state bg-white/5 pb-0 border border-white/10 p-8 rounded-20px align-super flex-wrap">
+                </div>
+                <div className="number-state  !w-full">
+                <div className=" bg-white/5 w-full h-full pb-0 border border-white/10 p-8 pr-3 rounded-20px align-super flex-wrap space-y-3 lg:space-y-0">
                   <div className="relative block w-full">
-                    <h5>Foot fall</h5>
+                    <h5 className="text-xl text-white font-normal">Foot fall</h5>
                   </div>
                   <div className="relative w-full ml-2">
                     <Image src={Gridfive} alt="Gridfive" className="ml-auto" />
                   </div>
                 </div>
-                <div className="number-state bg-white/5 border border-white/10 p-8 rounded-20px flex  flex-wrap ">
-                  <div className="relative block w-full max-w-40 ">
-                    <h5>Unified segment accross platforms.</h5>
+                </div>
+                <div className="number-state !w-full">
+                <div className=" bg-white/5 w-full h-full border border-white/10 p-8 rounded-20px flex  flex-wrap space-y-4 lg:space-y-0">
+                  <div className="relative block w-full max-w-48">
+                    <h5 className="text-base md:text-xl text-white font-normal">Unified segment accross platforms.</h5>
                   </div>
                   <div className="flex items-center  w-full justify-end">
-                    <div className="flex justify-center space-x-6">
-                      <span className="w-6 h-6 rounded-full bg-red-500"></span>
-                      <span className="w-6 h-6 rounded-full bg-orange-500"></span>
-                      <span className="w-6 h-6 rounded-full bg-yellow-500"></span>
-                      <span className="w-6 h-6 rounded-full bg-green-500"></span>
-                      <span className="w-6 h-6 rounded-full bg-blue-500"></span>
-                      <span className="w-6 h-6 rounded-full bg-indigo-500"></span>
-                      <span className="w-6 h-6 rounded-full bg-purple-500"></span>
-                      <span className="w-6 h-6 rounded-full bg-pink-500"></span>
+                    <div className="flex justify-center space-x-2 md:space-x-6">
+                      <span className="w-4 h-4 md:w-6 md:h-6 rounded-full bg-red-500"></span>
+                      <span className="w-4 h-4 md:w-6 md:h-6 rounded-full bg-orange-500"></span>
+                      <span className="w-4 h-4 md:w-6 md:h-6 rounded-full bg-yellow-500"></span>
+                      <span className="w-4 h-4 md:w-6 md:h-6 rounded-full bg-green-500"></span>
+                      <span className="w-4 h-4 md:w-6 md:h-6 rounded-full bg-blue-500"></span>
+                      <span className="w-4 h-4 md:w-6 md:h-6 rounded-full bg-indigo-500"></span>
+                      <span className="w-4 h-4 md:w-6 md:h-6 rounded-full bg-purple-500"></span>
+                      <span className="w-4 h-4 md:w-6 md:h-6 rounded-full bg-pink-500"></span>
                     </div>
                   </div>
+                </div>
                 </div>
               </div>
             </div>
@@ -299,14 +351,14 @@ export default function Home() {
           </div> */}
         </section>
         {/* FOURTH SECTION */}
-        <section className="text-white py-20 px-32 overflow-hidden">
-          <div className="container mx-auto">
-            <h2 className="text-32px text-text-primary font-semibold mb-10">
+        <section className="text-white py10 xl:py-20 px-5 md:px-8 lg:px-16 xl:px-32 overflow-hidden pr-0">
+          <div className="container mx-auto pr-0">
+            <h2 className="text-2xl md:text-32px text-text-primary font-semibold mb-10">
               Our products
             </h2>
             <Slider {...productSliderSettings}>
               <div className="w-1/3 px-2">
-                <div className="bg-card-bg p-8 pb-0 rounded-32px max-h-560px">
+                <div className="bg-card-bg p-8 pb-0 rounded-20px md:rounded-20px md:rounded-32px h-560px overflow-hidden">
                   <div className="flex items-center justify-between">
                     <div className="relative">
                       <span className="uppercase text-base font-normal block">
@@ -339,7 +391,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="w-1/3 px-2">
-                <div className="bg-card-bg p-8 pb-0 rounded-32px max-h-560px">
+                <div className="bg-card-bg p-8 pb-0 rounded-20px md:rounded-32px h-560px overflow-hidden">
                   <div className="flex items-center justify-between">
                     <div className="relative">
                       <span className="uppercase text-base font-normal block">
@@ -372,7 +424,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="w-1/3 px-2">
-                <div className="bg-card-bg p-8 pb-0 rounded-32px max-h-560px">
+                <div className="bg-card-bg p-8 pb-0 rounded-20px md:rounded-32px h-560px overflow-hidden">
                   <div className="flex items-center justify-between">
                     <div className="relative">
                       <span className="uppercase text-base font-normal block">
@@ -405,7 +457,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="w-1/3 px-2">
-                <div className="bg-card-bg p-8 pb-0 rounded-32px max-h-560px">
+                <div className="bg-card-bg p-8 pb-0 rounded-20px md:rounded-32px h-560px overflow-hidden">
                   <div className="flex items-center justify-between">
                     <div className="relative">
                       <span className="uppercase text-base font-normal block">
@@ -441,12 +493,12 @@ export default function Home() {
           </div>
         </section>
         {/* FIFTH SECTION */}
-        <section className="text-white py-16 px-32">
-          <div className="container mx-auto px-4">
-            <div className="max-w-8xl pr-0 overflow-hidden mx-auto bg-black rounded-40px bg-radial px-16 pt-20 relative before:contents-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-black/50">
+        <section className="text-white py-10 md:py-16 px-5 md:px-8 lg:px-16 xl:px-32">
+          <div className="container mx-auto px-0">
+            <div className="max-w-8xl pr-0 md:pr-0 lg:pr-0 overflow-hidden mx-auto bg-black rounded-20px  md:h-unset md:rounded-40px bg-radial px-10 lg:px-16 pt-10 lg:pt-20 relative before:contents-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-black/50">
               <div className="flex flex-col lg:flex-row ">
                 <div className="w-full lg:w-1/2 mb-8 lg:mb-0 lg:pr-8 z-10">
-                  <h2 className="text-2xl !leading-3.25rem md:text-3xl xl:text-40px font-semibold mb-6">
+                  <h2 className="text-xl md:text-2xl lg:!leading-3.25rem lg:text-3xl xl:text-40px font-semibold mb-4 md:mb-6">
                     Pizza ipsum dolor meat lovers buffalo.
                   </h2>
                   <ul className="flex flex-wrap  mb-6  gap-y-2 gap-x-4">
@@ -475,7 +527,7 @@ export default function Home() {
                   </ul>
                   <a
                     href="#"
-                    className="inline-flex items-center px-6 py-3 border border-white rounded-full text-base font-medium hover:bg-white hover:text-black transition-colors duration-300"
+                    className="inline-flex items-center px-6 py-3 border border-white rounded-full text-sm md:text-base font-medium hover:bg-white hover:text-black transition-colors duration-300"
                   >
                     Try for Free
                     <svg
@@ -501,7 +553,7 @@ export default function Home() {
                 </div>
 
                 <div className="w-full lg:w-1/2 flex items-center z-10">
-                  <div className="max-h-348px h-348px">
+                  <div className="xl:max-h-348px md:max-h-64 md:h-64 xl:h-348px mt-6 lg:mt-0">
                     <Image
                       src={heroSlider}
                       alt="hero-mg"
