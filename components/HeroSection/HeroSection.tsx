@@ -5,7 +5,7 @@ import Button from "../Button/Button";
 import Image from "next/image";
 
 // Components
-import WaveAnimation from "../WaveAnimation/WaveAnimation";
+// import WaveAnimation from "../WaveAnimation/WaveAnimation";
 
 const HeroSection = () => {
   return (

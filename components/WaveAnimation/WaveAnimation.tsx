@@ -4,15 +4,15 @@ import * as THREE from "three";
 const WaveAnimation: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+
+  const updateDimensions = () => {
+    const width = window.innerWidth -25;
+    const height = window.innerHeight + 575;
+    setDimensions({ width, height });
+  };
+
   useEffect(() => {
     if (typeof window === "undefined" || !containerRef.current) return;
-
-    const updateDimensions = () => {
-      setDimensions({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    };
 
     updateDimensions();
     window.addEventListener("resize", updateDimensions);
@@ -30,7 +30,10 @@ const WaveAnimation: React.FC = () => {
     )
       return;
 
-    const SEPARATION = 14;
+    const isMobile = dimensions.width < 768;
+    const isTablet = dimensions.width >= 768 && dimensions.width < 1024;
+
+    const SEPARATION = isMobile ? 20 : isTablet ? 18 : 14;
     const AMOUNTX = Math.round(dimensions.width / SEPARATION);
     const AMOUNTY = Math.round(dimensions.height / SEPARATION);
 
@@ -53,7 +56,6 @@ const WaveAnimation: React.FC = () => {
       scene = new THREE.Scene();
 
       const numParticles = AMOUNTX * AMOUNTY;
-
       const geometry = new THREE.BufferGeometry();
       positions = new Float32Array(numParticles * 3);
 
@@ -106,7 +108,6 @@ const WaveAnimation: React.FC = () => {
       }
       particles.geometry.attributes.position.needsUpdate = true;
       renderer.render(scene, camera);
-      console.log("count", count);
       count += 0.018;
     };
 
@@ -138,7 +139,6 @@ const WaveAnimation: React.FC = () => {
         position: "absolute",
         top: 0,
         left: 0,
-        // bottom: 380,
         width: "100%",
         height: "100%",
         zIndex: -1,

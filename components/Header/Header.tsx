@@ -2,10 +2,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import SiteLogo from "../../public/images/site-logo.png";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import useClickOutside from "@/hooks/useClickOutside";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  useClickOutside(menuRef, () => {
+    if (menuOpen) setMenuOpen(false);
+  });
 
   return (
     <header className="border-black/10 py-4 px-5 lg:px-16 xl:px-32 backdrop-blur-md w-full fixed top-0 z-[999]">
@@ -14,7 +19,7 @@ const Navbar = () => {
           <div className="navbar-brand text-white font-bold bg-black">
             <Image src={SiteLogo} alt="site-logo" width={100} height={40} />
           </div>
-          <div className="flex items-start lg:hidden">
+          <div className="flex items-start lg:hidden" ref={menuRef}>
             <button
               onClick={() => setMenuOpen(!menuOpen)}
               className="text-white focus:outline-none"
