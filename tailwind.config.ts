@@ -33,6 +33,7 @@ const config: Config = {
         "text-fourth": "#434343",
         "text-third": "#333333",
         "text-fifth": "#505051",
+        "bg-dark": "#060606",
         "footer-primary": "#EFEDFD",
         "btn-primary": "#320E5C",
         "card-primary": "#171718",
@@ -50,12 +51,14 @@ const config: Config = {
       },
 
       spacing: {
+        "60px": "60px",
         "30rem": "30rem",
         "70px": "70px",
         "80px": "80px",
         "100px": "100px",
         "112px": "112px",
         "160px": "160px",
+        "298px": "298px",
         "348px": "348px",
         "560px": "560px",
         "580px": "580px",
