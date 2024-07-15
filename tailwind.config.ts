@@ -37,6 +37,7 @@ const config: Config = {
         "footer-primary": "#EFEDFD",
         "btn-primary": "#320E5C",
         "card-primary": "#171718",
+        "highlight-primary": "#F5F5F7",
       },
       backgroundImage: {
         // titleShape: "url('/title_yellow_shape.svg')",
@@ -51,6 +52,7 @@ const config: Config = {
       },
 
       spacing: {
+        "15px": "15px",
         "60px": "60px",
         "30rem": "30rem",
         "70px": "70px",

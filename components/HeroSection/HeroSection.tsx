@@ -11,7 +11,7 @@ const HeroSection = () => {
   return (
     <>
       {/* <WaveAnimation /> */}
-      <section className="text-white min-h-[calc(100vh - 300px)] flex pb-0 px-5 flex-col before:mix-blend-luminosity before:opacity-[0.4] justify-center items-center pt-24 lg:pt-32 xl:pt-160px py-16 relative  before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full z-0 before:z-[-1]  before:bg-bg-primary/30">
+      <section className="text-white min-h-[calc(100vh - 300px)] flex pb-0 px-15px lg:px-14 flex-col before:mix-blend-luminosity before:opacity-[0.4] justify-center items-center pt-160px py-16 relative  before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full z-0 before:z-[-1]  before:bg-bg-primary/30">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-3xl lg:text-5xl xl:text-76px text-text-primary xl:leading-79px font-bold mb-4 ">
             Revolution of Retail Industry

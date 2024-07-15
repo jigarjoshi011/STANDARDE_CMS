@@ -16,7 +16,7 @@ const FeatureList = () => {
     draggable: true,
   };
   return (
-    <section className="text-white py-10 lg:py-14 pb-8 xl:py-100px px-5 lg:px-16 xl:px-32 overflow-hidden ">
+    <section className="text-white py-10 lg:py-14 pb-8 xl:py-100px px-15px lg:px-14 xl:px-32 overflow-hidden ">
       <div className="container mx-auto">
         <h2 className="text-2xl lg:text-32px text-text-primary font-semibold mb-4 md:mb-6 xl:mb-12">
           AI Search Feature list

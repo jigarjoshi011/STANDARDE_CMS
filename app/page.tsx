@@ -76,7 +76,7 @@ export default function Home() {
       <div>
         <HeroSection />
         <FeatureList />
-        <section className="text-white py-6 md:py-10 xl:py-16 px-5">
+        <section className="text-white py-6 md:py-10 xl:py-16 px-15px lg:px-14">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <Button className="bg-btn-primary text-white px-6 py-3 rounded-full font-normal">
@@ -91,8 +91,8 @@ export default function Home() {
                 engaging experiences that win loyalty.
               </p>
             </div>
-            <div className="l-ContentColumn w-full max-w-full xl:max-w-[1125px] mx-auto px-5 md:px-14 lg:px-0">
-              <div className="main-container flex flex-wrap lg:grid w-full relative lg:gap-5">
+            <div className="l-ContentColumn w-full max-w-full xl:max-w-[1125px] mx-auto px-15px lg:px-14 md:px-14 ">
+              <div className="main-container flex flex-wrap xl:grid w-full relative xl:gap-5">
                 <div className="number-state">
                   <div className=" bg-white/5 w-full h-full border border-white/10 p-8 rounded-20px">
                     <Image src={Gridone} className="mx-auto" alt="ge-1" />
@@ -109,13 +109,13 @@ export default function Home() {
                 <div className="number-state">
                   <div className=" bg-white/5 w-full h-full border border-white/10 p-8 rounded-20px ">
                     <div className="flex justify-between items-center flex-wrap">
-                      <div className="relative">
+                      <div className="relative w-full xl:w-unset">
                         <h5 className="text-80px text-text-fifth font-bold leading-none">
                           2.5x
                         </h5>
                         <span>Growth</span>
                       </div>
-                      <div className="relative w-full lg:w-unset mt-8 lg:mt-0">
+                      <div className="relative w-full xl:w-unset mt-8 xl:mt-0">
                         <Image
                           src={Gridthree}
                           alt="gridthree"
@@ -125,7 +125,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="number-state !w-full">
+                <div className="number-state !w-full lg:!w-1/2">
                   <div className=" bg-white/5 w-full h-full border border-white/10 p-8 rounded-20px">
                     <div className="relative ">
                       <h5 className="text-80px text-text-fifth font-bold leading-none">
@@ -133,8 +133,8 @@ export default function Home() {
                       </h5>
                       <span>Benefits for</span>
                     </div>
-                    <div className="flex gap-5 mt-10 flex-wrap lg:flex-nowrap lg:mt-[114px]">
-                      <div className="bg-bg-second w-full lg:w-unset rounded-xl p-6 text-center space-y-2 lg:space-y-0">
+                    <div className="flex gap-5 mt-7 flex-wrap lg:flex-nowrap lg:mt-[114px]">
+                      <div className="bg-bg-second w-full lg:w-1/2 rounded-xl p-6 text-center space-y-2 lg:space-y-0">
                         <div className="w-16 lg:w-unset h-16 mx-auto lg:h-28">
                           <Image
                             src={Gridsix}
@@ -146,7 +146,7 @@ export default function Home() {
                           Store
                         </h6>
                       </div>
-                      <div className="bg-bg-second w-full lg:w-unset rounded-xl p-6 text-center space-y-2 lg:space-y-0">
+                      <div className="bg-bg-second w-full lg:w-1/2 rounded-xl p-6 text-center space-y-2 lg:space-y-0">
                         <div className="w-16 lg:w-unset h-16 mx-auto lg:h-28">
                           <Image
                             src={Grideight}
@@ -178,7 +178,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="number-state ">
+                <div className="number-state lg:!w-full xl:!w-unset ">
                   <div className=" bg-white/5 w-full h-full border border-white/10 p-0 rounded-20px overflow-hidden">
                     <div className="relative w-full h-full">
                       <Image
@@ -189,7 +189,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="number-state  !w-full">
+                <div className="number-state !w-full lg:!w-1/2">
                   <div className=" bg-white/5 w-full h-full pb-0 border border-white/10 p-8 pr-3 rounded-20px align-super flex-wrap space-y-3 lg:space-y-0">
                     <div className="relative block w-full">
                       <h5 className="text-xl text-white font-normal">
@@ -205,7 +205,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="number-state !w-full">
+                <div className="number-state !w-full lg:!w-1/2">
                   <div className=" bg-white/5 w-full h-full border border-white/10 p-8 rounded-20px flex  flex-wrap space-y-4 lg:space-y-0">
                     <div className="relative block w-full max-w-48">
                       <h5 className="text-base md:text-xl text-white font-normal">

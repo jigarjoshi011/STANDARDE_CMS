@@ -49,14 +49,14 @@ const ProductListing: FC = () => {
     ],
   };
   return (
-    <section className="text-white py10 xl:py-20 px-5 md:px-8 lg:px-16 xl:px-32 overflow-hidden pr-0">
+    <section className="text-white py10 xl:py-20 px-15px md:px-8 lg:px-14 xl:px-32 overflow-hidden pr-0">
       <div className="container mx-auto pr-0">
         <h2 className="text-2xl md:text-32px text-text-primary font-semibold mb-10">
           Our products
         </h2>
         <Slider {...productSliderSettings}>
           <div className="w-1/3 px-2">
-            <div className="bg-card-bg p-8 pb-0 rounded-20px md:rounded-20px md:rounded-32px h-560px overflow-hidden">
+            <div className="bg-card-bg p-8 pb-0 rounded-20px md:rounded-20px lg:rounded-32px h-560px overflow-hidden">
               <div className="flex items-center justify-between">
                 <div className="relative">
                   <span className="uppercase text-base font-normal block">

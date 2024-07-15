@@ -31,7 +31,7 @@ export const NotFound = () => {
             <Button
               varient="primary"
               parentClass="mx-auto mt-6"
-              className="!rounded-lg !px-5 !py-3"
+              className="!rounded-lg !px-15px !py-3"
               onClickHandler={navigateToHome}
             >
               Go Back Home
