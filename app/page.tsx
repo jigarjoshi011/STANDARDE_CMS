@@ -1,13 +1,13 @@
 "use client";
 import Image from "next/image";
 import Slider, { Settings } from "react-slick";
-import Gridone from "../public/images/geidone.png";
+import Gridone from "../public/images/osSystem.png";
 import Gridtwo from "../public/images/geidtwo.png";
-import Gridthree from "../public/images/gridthree.png";
+import Gridthree from "../public/images/chart.svg";
 import Gridfour from "../public/images/gridfour.png";
 import Gridfive from "../public/images/gridsix.png";
-import Gridsix from "../public/images/store.png";
-import Grideight from "../public/images/shopping.png";
+import Gridsix from "../public/images/avtar-grp-hd.png";
+import Grideight from "../public/images/customer.svg";
 
 import Button from "@/components/Button/Button";
 import Head from "next/head";
@@ -111,7 +111,7 @@ export default function Home() {
                     <div className="flex justify-between items-center flex-wrap">
                       <div className="relative w-full xl:w-unset">
                         <h5 className="text-80px text-text-fifth font-bold leading-none">
-                          2.5x
+                          5.0x
                         </h5>
                         <span>Growth</span>
                       </div>

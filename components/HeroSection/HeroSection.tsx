@@ -21,11 +21,11 @@ const HeroSection = () => {
             pesto mayo rib ipsum melted sausage lovers. Large wing green stuffed
             cr
           </p>
-          <Button className="bg-btn-primary text-sm lg:text-base text-white px-6 py-2.5 lg:py-3 rounded-full font-normal">
+          <Button className="bg-btn-primary lg:text-base text-white px-6 py-2.5 lg:py-3 rounded-full font-normal text-12px">
             AI FOR THE RETAILERS
           </Button>
 
-          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold mt-9 mb-4">
+          <h2 className="lg:text-4xl xl:text-5xl font-bold mt-9 mb-4 text-24px">
             Generative AI Search
           </h2>
           <p className="text-sm lg:text-base mb-7 lg:mb-10 text-text-second max-w-2xl mx-auto">

@@ -1,28 +1,70 @@
-import Image from "next/image";
 import React from "react";
-import Slider, { Settings } from "react-slick";
+import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode, Pagination } from "swiper/modules";
 import heroSlider from "../../public/images/hero-slider.png";
 import heroSliderTwo from "../../public/images/slider01.png";
 
 const FeatureList = () => {
-  const settings: Settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    swipeToSlide: true,
-    draggable: true,
-  };
   return (
-    <section className="text-white py-10 lg:py-14 pb-8 xl:py-100px  lg:px-14 xl:px-36 overflow-hidden ">
-      <div className="container mx-auto px-15px">
-        <h2 className="text-2xl lg:text-32px text-text-primary font-semibold mb-4 md:mb-6 xl:mb-12 ml-4">
+    <section className="text-white py-10 lg:py-14 pb-8 xl:py-100px overflow-hidden">
+      <div className="container mx-auto lg:px-24 md:px-20 xl:px-32 sm:px-4">
+        <h2 className="text-16px lg:text-32px text-text-primary font-semibold mb-4 md:mb-6 xl:mb-12">
           AI Search Feature list
         </h2>
-        <div className="slider-slick-swiper">
-          <Slider {...settings}>
+      </div>
+      <div className="mx-0">
+        <Swiper
+          slidesPerView={1.2}
+          spaceBetween={30}
+          freeMode={true}
+          centeredSlides={true}
+          modules={[FreeMode, Pagination]}
+          pagination={{
+            enabled: false,
+            clickable: false,
+            bulletClass: "swiper-pagination-bullet",
+          }}
+          breakpoints={{
+            320: {
+              width: 320,
+              slidesPerView: 1.1,
+              spaceBetween: 10,
+              pagination: {
+                enabled: true,
+                clickable: true,
+                bulletClass: "swiper-pagination-bullet",
+              },
+            },
+            800: {
+              width: 740,
+              slidesPerView: 1.1,
+              spaceBetween: 10,
+              pagination: {
+                enabled: true,
+                clickable: true,
+                bulletClass: "swiper-pagination-bullet",
+              },
+            },
+            960: {
+              width: 940,
+              slidesPerView: 1.2,
+              spaceBetween: 30,
+              pagination: {
+                enabled: false,
+              },
+            },
+            1040: {
+              width: 1440,
+              slidesPerView: 1.22,
+              spaceBetween: 30,
+              pagination: {
+                enabled: false,
+              },
+            },
+          }}
+        >
+          <SwiperSlide>
             <div className="!w-full h-full ">
               <div className="slider-container relative">
                 <div className="slider flex transition-transform duration-300 ease-in-out">
@@ -45,6 +87,8 @@ const FeatureList = () => {
                 </div>
               </div>
             </div>
+          </SwiperSlide>
+          <SwiperSlide>
             <div className="!w-full h-full">
               <div className="slider-container relative">
                 <div className="slider flex transition-transform duration-300 ease-in-out">
@@ -78,8 +122,8 @@ const FeatureList = () => {
                 </div>
               </div>
             </div>
-          </Slider>
-        </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
     </section>
   );

@@ -17,7 +17,7 @@ const Navbar = () => {
       <div className="container mx-auto px-0">
         <div className="flex justify-between items-center">
           <div className="navbar-brand text-white font-bold bg-black">
-            <Image src={SiteLogo} alt="site-logo" width={100} height={40} />
+            <Image src={SiteLogo} alt="site-logo" className="w-32 h-8" />
           </div>
           <div className="flex items-start lg:hidden" ref={menuRef}>
             <button

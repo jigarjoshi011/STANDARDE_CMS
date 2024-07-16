@@ -51,7 +51,7 @@ const ProductListing: FC = () => {
   return (
     <section className="text-white py10 xl:py-20 px-15px md:px-8 lg:px-14 xl:px-32 overflow-hidden pr-0">
       <div className="container mx-auto pr-0">
-        <h2 className="text-2xl md:text-32px text-text-primary font-semibold mb-10">
+        <h2 className="text-16px md:text-32px text-text-primary font-semibold mb-10">
           Our products
         </h2>
         <Slider {...productSliderSettings}>

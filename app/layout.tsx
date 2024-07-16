@@ -2,6 +2,10 @@ import { Metadata } from "next";
 import "./globals.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 
