@@ -37,6 +37,8 @@ const config: Config = {
         "footer-primary": "#EFEDFD",
         "btn-primary": "#320E5C",
         "card-primary": "#171718",
+        "card-second": "#3EBE86",
+        "card-third": "#3E34C5",
         "highlight-primary": "#F5F5F7",
       },
       backgroundImage: {
@@ -70,6 +72,7 @@ const config: Config = {
       fontSize: {
         0: "0",
         "28px": "28px",
+        "34px": "34px",
         "40px": "40px",
         "52px": "52px",
         "76px": "76px",
@@ -80,6 +83,7 @@ const config: Config = {
       lineHeight: {
         1: "1",
         "1.25rem": "1.25rem", 
+        "3rem": "3rem", 
         "3.25rem": "3.25rem", 
         "79px": "79px",
         

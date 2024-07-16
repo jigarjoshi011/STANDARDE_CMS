@@ -7,8 +7,8 @@ const Footer = () => {
   return (
     <footer className="text-white py-6">
       <div className="container mx-auto px-15px md:px-8  lg:px-14  xl:px-32">
-        <div className="flex flex-col space-y-6 sm:space-y-0 sm:flex-row sm:justify-between sm:items-start">
-          <div className="flex flex-col items-start md:items-center sm:items-start space-y-4 md:space-y-8">
+        <div className="flex flex-col space-y-6 sm:space-y-0 sm:flex-row sm:justify-between sm:items-start md:items-center">
+          <div className="flex flex-col  md:items-center items-start space-y-4 md:space-y-8">
             <Image src={SiteLogo} alt="site-logo" className="w-52 h-12" />
             <div className="flex space-x-4 md:space-x-6">
               <a
@@ -78,7 +78,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="text-sm text-left md:text-center sm:text-right ">
-            <div className="flex items-center justify-start md:justify-center sm:justify-end mb-6">
+            <div className="flex items-center justify-start md:justify-end mb-6">
               <svg
                 className="w-4 h-4 mr-2"
                 fill="none"
@@ -124,7 +124,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="mt-10 py-6 hidden  border-t border-white/20  md:flex flex-col sm:flex-row justify-between items-center">
+        <div className="mt-10 py-6 pb-2.5 hidden  border-t border-white/20  md:flex flex-col sm:flex-row justify-between items-center">
           <div className="mb-4 sm:mb-0 text-center sm:text-left">
             <ul className="flex items-center ">
               <li>
@@ -136,7 +136,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <p className="text-footer-primary/60 text-sm px-3.5">.</p>
+                <p className="text-footer-primary/60 text-sm font-normal px-3.5">.</p>
               </li>
               <li>
                 <a
@@ -148,7 +148,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <p className="text-footer-primary/60 text-sm">
+          <p className="text-footer-primary/60 text-sm font-normal">
             Attentions Data Labs LLC. All rights reserved.
           </p>
         </div>

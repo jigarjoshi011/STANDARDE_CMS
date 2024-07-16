@@ -6,6 +6,7 @@
 /* 
 
 */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 html {
   @apply scroll-smooth leading-[1.8];
 }
@@ -16,6 +17,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   @apply bg-bg-second;
+}
+.font-raleway{
+  font-family: "Raleway", sans-serif;
 }
 .bg-radial {
   background: radial-gradient(295.56% 249.54% at 2.89% 5.88%,
