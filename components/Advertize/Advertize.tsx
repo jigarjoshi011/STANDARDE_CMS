@@ -6,10 +6,10 @@ const Advertize: FC = () => {
   return (
     <section className="text-white py-10 md:py-16 px-15px lg:px-14 md:px-8 xl:px-32">
       <div className="container mx-auto px-0">
-        <div className="max-w-8xl pr-0 md:pr-0 lg:pr-0 overflow-hidden mx-auto bg-black rounded-20px  md:h-unset md:rounded-40px bg-radial px-10 lg:px-16 pt-10 lg:pt-20 relative before:contents-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-black/50">
+        <div className="max-w-8xl pr-0 md:pr-0 lg:pr-0 overflow-hidden mx-auto bg-black rounded-20px  md:h-unset md:rounded-40px bg-radial px-8 lg:px-10 pt-10 lg:pt-10 relative before:contents-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-black/50 ">
           <div className="flex flex-col lg:flex-row ">
             <div className="w-full lg:w-1/2 mb-8 lg:mb-0 lg:pr-8 z-10">
-              <h2 className="text-xl md:text-2xl lg:!leading-3.25rem lg:text-3xl xl:text-40px font-semibold mb-4 md:mb-6">
+              <h2 className="text-xl md:text-2xl lg:!leading-3.25rem lg:mb-3 lg:text-3xl xl:text-40px font-semibold mb-4 md:mb-6">
                 Pizza ipsum dolor meat lovers buffalo.
               </h2>
               <ul className="flex flex-wrap  mb-6  gap-y-2 gap-x-4">
@@ -63,8 +63,8 @@ const Advertize: FC = () => {
               </a>
             </div>
 
-            <div className="w-full lg:w-1/2 flex items-center z-10">
-              <div className="xl:max-h-348px md:max-h-64 md:h-64 xl:h-348px mt-6 lg:mt-0">
+            <div className="w-full lg:w-1/2 flex items-center z-10 ml-16">
+              <div className="xl:max-h-348px md:max-h-64 md:h-64 xl:h-348px mt-6">
                 <Image
                   src={heroSlider}
                   alt="hero-mg"

@@ -214,3 +214,13 @@ body {
   scrollbar-width: thin;
   scrollbar-color: rgba(255, 255, 255, 0.5) rgba(255, 255, 255, 0.1);
 }
+.slick-dots li button:before {
+  color: white !important;
+  opacity: 0.5 !important;
+  font-size: 6px !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: white !important;
+  opacity: 1 !important;
+}

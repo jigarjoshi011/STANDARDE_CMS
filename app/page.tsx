@@ -91,8 +91,8 @@ export default function Home() {
                 engaging experiences that win loyalty.
               </p>
             </div>
-            <div className="l-ContentColumn w-full max-w-full xl:max-w-[1125px] mx-auto px-15px lg:px-14 md:px-14 ">
-              <div className="main-container flex flex-wrap xl:grid w-full relative xl:gap-5">
+            <div className="l-ContentColumn w-full max-w-full xl:max-w-[1125px] mx-auto px-15px lg:px-0 md:px-14 ">
+              <div className="main-container flex flex-wrap xl:grid  w-full relative xl:gap-5">
                 <div className="number-state">
                   <div className=" bg-white/5 w-full h-full border border-white/10 p-8 rounded-20px">
                     <Image src={Gridone} className="mx-auto" alt="ge-1" />
@@ -125,7 +125,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="number-state !w-full lg:!w-1/2">
+                <div className="number-state !w-full lg:!w-1/2 xl:!w-full">
                   <div className=" bg-white/5 w-full h-full border border-white/10 p-8 rounded-20px">
                     <div className="relative ">
                       <h5 className="text-80px text-text-fifth font-bold leading-none">
@@ -189,7 +189,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="number-state !w-full lg:!w-1/2">
+                <div className="number-state !w-full xl:!w-full lg:!w-1/2">
                   <div className=" bg-white/5 w-full h-full pb-0 border border-white/10 p-8 pr-3 rounded-20px align-super flex-wrap space-y-3 lg:space-y-0">
                     <div className="relative block w-full">
                       <h5 className="text-xl text-white font-normal">
@@ -205,7 +205,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="number-state !w-full lg:!w-1/2">
+                <div className="number-state !w-full xl:!w-full lg:!w-1/2">
                   <div className=" bg-white/5 w-full h-full border border-white/10 p-8 rounded-20px flex  flex-wrap space-y-4 lg:space-y-0">
                     <div className="relative block w-full max-w-48">
                       <h5 className="text-base md:text-xl text-white font-normal">
