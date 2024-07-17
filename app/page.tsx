@@ -92,8 +92,12 @@ export default function Home() {
                 engaging experiences that win loyalty.
               </p>
             </div>
-            <div className="l-ContentColumn w-full max-w-full xl:max-w-[1275px] mx-auto px-15px lg:px-0 md:px-14 ">
-              <Image src={Mobproduct} className="w-full h-full block xl:hidden" alt="Mobproduct"/>
+            <div className="l-ContentColumn w-full max-w-full xl:max-w-[1200px] mx-auto px-15px lg:px-4 md:px-4 ">
+              <Image
+                src={Mobproduct}
+                className="w-full h-full block xl:hidden"
+                alt="Mobproduct"
+              />
               <div className="main-container hidden  flex-wrap xl:grid  w-full relative xl:gap-5">
                 <div className="number-state">
                   <div className=" bg-white/5 w-full h-full border border-white/10 p-8 rounded-20px">

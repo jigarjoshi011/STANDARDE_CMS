@@ -57,9 +57,9 @@ const config: Config = {
 
       spacing: {
         "15px": "15px",
+        "16px": "16px",
         "60px": "60px",
         "30rem": "30rem",
-        "60px": "60px",
         "70px": "70px",
         "80px": "80px",
         "100px": "100px",
