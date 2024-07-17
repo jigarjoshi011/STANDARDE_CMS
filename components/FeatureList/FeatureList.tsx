@@ -8,7 +8,7 @@ import heroSliderTwo from "../../public/images/slider01.png";
 const FeatureList = () => {
   return (
     <section className="text-white py-10 lg:py-14 pb-8 xl:py-100px overflow-hidden">
-      <div className="container mx-auto lg:px-24 md:px-10 xl:px-32 sm:px-4">
+      <div className="container mx-0 lg:px-24 md:px-10 xl:px-32 sm:px-4">
         <h2 className="text-16px lg:text-32px text-text-primary font-semibold mb-4 md:mb-6 xl:mb-12">
           AI Search Feature list
         </h2>

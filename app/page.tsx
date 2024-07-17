@@ -7,6 +7,7 @@ import Gridthree from "../public/images/chart.svg";
 import Gridfour from "../public/images/gridfour.png";
 import Gridfive from "../public/images/gridsix.png";
 import Gridsix from "../public/images/avtar-grp-hd.png";
+import Mobproduct from "../public/images/mobile-view-product.png";
 import Grideight from "../public/images/customer.svg";
 
 import Button from "@/components/Button/Button";
@@ -77,7 +78,7 @@ export default function Home() {
         <HeroSection />
         <FeatureList />
         <section className="text-white py-6 md:py-10 xl:py-16 px-15px lg:px-14">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-[80rem] mx-auto">
             <div className="text-center mb-12">
               <Button className="bg-btn-primary text-white px-6 py-3 rounded-full font-normal">
                 Standarde Store’s
@@ -91,8 +92,9 @@ export default function Home() {
                 engaging experiences that win loyalty.
               </p>
             </div>
-            <div className="l-ContentColumn w-full max-w-full xl:max-w-[1125px] mx-auto px-15px lg:px-0 md:px-14 ">
-              <div className="main-container flex flex-wrap xl:grid  w-full relative xl:gap-5">
+            <div className="l-ContentColumn w-full max-w-full xl:max-w-[1275px] mx-auto px-15px lg:px-0 md:px-14 ">
+              <Image src={Mobproduct} className="w-full h-full block xl:hidden" alt="Mobproduct"/>
+              <div className="main-container hidden  flex-wrap xl:grid  w-full relative xl:gap-5">
                 <div className="number-state">
                   <div className=" bg-white/5 w-full h-full border border-white/10 p-8 rounded-20px">
                     <Image src={Gridone} className="mx-auto" alt="ge-1" />

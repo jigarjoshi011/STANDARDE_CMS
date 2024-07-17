@@ -8,17 +8,18 @@ import { FreeMode, Pagination } from "swiper/modules";
 const ProductListing: FC = () => {
   return (
     <section className="text-white py-10 lg:py-14 pb-8 xl:py-100px overflow-hidden">
-      <div className="container mx-auto pr-0">
+      <div className="container mx-0 pr-0 lg:px-24 md:px-10 xl:px-32 sm:px-4">
         <h2 className="text-16px md:text-32px text-text-primary font-semibold mb-10">
           Our products
         </h2>
       </div>
-      <div className="mx-0">
+      <div className="mx-0 swiper-products">
         <Swiper
-          slidesPerView={5.2}
+        
+        slidesPerView={5.2}
           spaceBetween={30}
           freeMode={true}
-          centeredSlides={true}
+          loop={true}
           modules={[FreeMode, Pagination]}
           pagination={{
             enabled: false,
@@ -27,7 +28,6 @@ const ProductListing: FC = () => {
           }}
           breakpoints={{
             320: {
-              width: 320,
               slidesPerView: 1.1,
               spaceBetween: 10,
               pagination: {
@@ -37,9 +37,7 @@ const ProductListing: FC = () => {
               },
             },
             650: {
-              width: 740,
               slidesPerView: 2.1,
-              spaceBetween: 10,
               pagination: {
                 enabled: true,
                 clickable: true,
@@ -47,27 +45,21 @@ const ProductListing: FC = () => {
               },
             },
             800: {
-              width: 800,
               slidesPerView: 2.5,
-              spaceBetween: 30,
               pagination: {
                 enabled: true,
                 clickable: true,
                 bulletClass: "swiper-pagination-bullet",
               },
             },
-            960: {
-              width: 800,
-              slidesPerView: 5,
-              spaceBetween: 30,
+            1024: {
+              slidesPerView: 3,
               pagination: {
                 enabled: false,
               },
             },
-            1040: {
-              width: 1440,
+            1240: {
               slidesPerView: 3.5,
-              spaceBetween: 30,
               pagination: {
                 enabled: false,
               },

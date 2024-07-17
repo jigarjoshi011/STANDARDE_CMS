@@ -4,8 +4,8 @@ import heroSlider from "../../public/images/hero-slider.png";
 
 const Advertize: FC = () => {
   return (
-    <section className="text-white py-10 md:py-16 px-15px lg:px-14 md:px-8 xl:px-32">
-      <div className="container mx-auto px-0">
+    <section className="text-white ">
+      <div className="container mx-0 py-10 md:py-16 px-15px lg:px-14 md:px-8 xl:px-32">
         <div className="max-w-8xl pr-0 md:pr-0 lg:pr-0 overflow-hidden mx-auto bg-black rounded-20px  md:h-unset md:rounded-40px bg-radial px-8 lg:px-10 pt-10 lg:pt-10 relative before:contents-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-black/50 ">
           <div className="flex flex-col lg:flex-row ">
             <div className="w-full lg:w-1/2 mb-8 lg:mb-0 lg:pr-8 z-10">

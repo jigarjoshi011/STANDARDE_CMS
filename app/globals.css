@@ -240,7 +240,9 @@ body {
 .mySwiper .swiper-pagination {
   display: none;
 }
-
+.swiper-products .swiper {
+  @apply lg:pl-24 md:pl-10 pl-4 xl:pl-32;
+}
 @media (max-width: 768px) {
   .mySwiper .swiper-pagination {
     display: block;
