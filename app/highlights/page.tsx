@@ -11,6 +11,9 @@ import IciciBank from "../../public/images/icici-bank.png"
 import Velocity from "../../public/images/velocity.png"
 import NanoBank from "../../public/images/nano-bank.png"
 import RelieanceBank from "../../public/images/relieance-bank.png"
+import ProductTarget from "../../public/images/product-target.png"
+import Packcar from "../../public/images/pack-car.png"
+import PackBox from "../../public/images/pack-box.png"
 import Image from "next/image";
 
 
@@ -70,7 +73,7 @@ const Highlights: NextPage = () => {
     </div>
   </section>
   <section className=" px-15px lg:px-14 xl:px-40 py-20">
-    <div className="flex -mx-5">
+    <div className="flex -mx-15px">
       <div className="w-1/2 px-15px">
           <div className=" rounded-3xl bg-highlight-primary p-10">
             <h3 className="text-black font-medium text-34px leading-3rem">Scale 10x in offline retail by precisely targeting the right consumers.</h3>
@@ -104,7 +107,7 @@ const Highlights: NextPage = () => {
   </section>
   <section className=" px-15px lg:px-14 xl:px-40 py-40 bg-black" >
     
-    <div className="flex">
+    <div className="flex -mx-4">
     <div  className="w-1/2 px-4">
       <h2 className="text-40px leading-3rem font-bold font-raleway text-white">World’s first offline retail AI search engine.</h2>
       <div className="mt-16">
@@ -132,26 +135,61 @@ const Highlights: NextPage = () => {
 
   <section className=" px-15px lg:px-14 xl:px-40 py-20" >
     <h2 className="text-text-primary text-40px font-semibold">Product features</h2>
-    <div className="flex  mt-20">
-      <div className="w-{60%} px-3">
+    <div className="flex flex-wrap gap-y-6  mt-10 -mx-3">
+      <div className="w-[60%] px-3">
       <div className="bg-card-primary px-8 pb-8 rounded-40px overflow-hidden">
         <div className="rounded-32px overflow-hidden -translate-y-4">
           <Image src={HeroSlider} alt="HeroImg" className="mx-auto"/>
         </div>
-        <div className="mt-16">
+        <div className="mt-14">
         <h5 className="font-medium text-2xl text-white mb-2">Search </h5>
           <p className="text-base font-light text-white">Pizza ipsum dolor meat lovers buffalo. Marinara .</p>
         </div> </div>
         </div>
         <div className="w-[40%] px-3">
-      <div className="bg-card-primary px-8 pb-8 rounded-40px overflow-hidden">
-        <div className="rounded-32px overflow-hidden -translate-y-4">
-          <Image src={HeroSlider} alt="HeroImg" className="mx-auto"/>
-        </div>
-        <div className="mt-16">
-        <h5 className="font-medium text-2xl text-white mb-2">Search </h5>
+      <div className="bg-card-primary  py-8 rounded-40px overflow-hidden">
+        
+        <div className="mt-0 px-8">
+          <h5 className="font-medium text-2xl text-white mb-2">Search </h5>
           <p className="text-base font-light text-white">Pizza ipsum dolor meat lovers buffalo. Marinara .</p>
-        </div> </div>
+        </div> 
+        <div className=" overflow-hidden -translate-y-4 mt-60px">
+          <Image src={ProductTarget} alt="HeroImg" className="mx-auto w-full h-full"/>
+        </div>
+        </div>
+        </div>
+        <div className="w-full px-3">
+      <div className="bg-card-primary  p-8 rounded-40px overflow-hidden">
+        
+        <div className="mt-0 px-8">
+          <h5 className="font-medium text-2xl text-white mb-2">Launch </h5>
+          <p className="text-base font-light text-white">Pizza ipsum dolor meat lovers buffalo. Marinara meatball pan hand large .</p>
+        </div> 
+        <div className=" overflow-hidden -translate-y-4 mt-14 flex px-8">
+          <div className="w-1/2 px-5">
+              <div className="bg-card-fourth p-6  rounded-3xl">
+                <div className="relative space-y-4">
+                  <p className="text-5xl font-extrabold text-light-grey">01</p>
+                  <h5 className="text-3xl font-normal text-white">Distribute</h5>
+                </div>
+                <div className="relative">
+                  <Image src={Packcar} alt="Packcar"/>
+                </div>
+              </div>
+          </div>
+          <div className="w-1/2 px-5">
+              <div className="bg-card-fourth p-6  rounded-3xl">
+                <div className="relative space-y-4">
+                  <p className="text-5xl font-extrabold text-light-grey">01</p>
+                  <h5 className="text-3xl font-normal text-white">Distribute</h5>
+                </div>
+                <div className="relative">
+                  <Image src={PackBox} alt="Packcar"/>
+                </div>
+              </div>
+          </div>
+        </div>
+        </div>
         </div>
     </div>
   </section>
