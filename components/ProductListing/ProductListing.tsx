@@ -1,61 +1,80 @@
 import Image from "next/image";
-import Slider, { Settings } from "react-slick";
 import ProductSlideImage1 from "../../public/images/product_01.png";
 import ProductSlideImage2 from "../../public/images/product_02.png";
 import ProductSlideImage4 from "../../public/images/product_04.png";
 import { FC } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode, Pagination } from "swiper/modules";
 const ProductListing: FC = () => {
-  const productSliderSettings: Settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
   return (
-    <section className="text-white py10 xl:py-20 px-15px md:px-8 lg:px-14 xl:px-32 overflow-hidden pr-0">
+    <section className="text-white py-10 lg:py-14 pb-8 xl:py-100px overflow-hidden">
       <div className="container mx-auto pr-0">
         <h2 className="text-16px md:text-32px text-text-primary font-semibold mb-10">
           Our products
         </h2>
-        <Slider {...productSliderSettings}>
-          <div className="w-1/3 px-2">
+      </div>
+      <div className="mx-0">
+        <Swiper
+          slidesPerView={5.2}
+          spaceBetween={30}
+          freeMode={true}
+          centeredSlides={true}
+          modules={[FreeMode, Pagination]}
+          pagination={{
+            enabled: false,
+            clickable: false,
+            bulletClass: "swiper-pagination-bullet",
+          }}
+          breakpoints={{
+            320: {
+              width: 320,
+              slidesPerView: 1.1,
+              spaceBetween: 10,
+              pagination: {
+                enabled: true,
+                clickable: true,
+                bulletClass: "swiper-pagination-bullet",
+              },
+            },
+            650: {
+              width: 740,
+              slidesPerView: 2.1,
+              spaceBetween: 10,
+              pagination: {
+                enabled: true,
+                clickable: true,
+                bulletClass: "swiper-pagination-bullet",
+              },
+            },
+            800: {
+              width: 800,
+              slidesPerView: 2.5,
+              spaceBetween: 30,
+              pagination: {
+                enabled: true,
+                clickable: true,
+                bulletClass: "swiper-pagination-bullet",
+              },
+            },
+            960: {
+              width: 800,
+              slidesPerView: 5,
+              spaceBetween: 30,
+              pagination: {
+                enabled: false,
+              },
+            },
+            1040: {
+              width: 1440,
+              slidesPerView: 3.5,
+              spaceBetween: 30,
+              pagination: {
+                enabled: false,
+              },
+            },
+          }}
+        >
+          <SwiperSlide>
             <div className="bg-card-bg p-8 pb-0 rounded-20px md:rounded-20px lg:rounded-32px h-560px overflow-hidden">
               <div className="flex items-center justify-between">
                 <div className="relative">
@@ -87,8 +106,8 @@ const ProductListing: FC = () => {
                 />
               </div>
             </div>
-          </div>
-          <div className="w-1/3 px-2">
+          </SwiperSlide>
+          <SwiperSlide>
             <div className="bg-card-bg p-8 pb-0 rounded-20px md:rounded-32px h-560px overflow-hidden">
               <div className="flex items-center justify-between">
                 <div className="relative">
@@ -120,8 +139,8 @@ const ProductListing: FC = () => {
                 />
               </div>
             </div>
-          </div>
-          <div className="w-1/3 px-2">
+          </SwiperSlide>
+          <SwiperSlide>
             <div className="bg-card-bg p-8 pb-0 rounded-20px md:rounded-32px h-560px overflow-hidden">
               <div className="flex items-center justify-between">
                 <div className="relative">
@@ -153,8 +172,8 @@ const ProductListing: FC = () => {
                 />
               </div>
             </div>
-          </div>
-          <div className="w-1/3 px-2">
+          </SwiperSlide>
+          <SwiperSlide>
             <div className="bg-card-bg p-8 pb-0 rounded-20px md:rounded-32px h-560px overflow-hidden">
               <div className="flex items-center justify-between">
                 <div className="relative">
@@ -186,8 +205,8 @@ const ProductListing: FC = () => {
                 />
               </div>
             </div>
-          </div>
-        </Slider>
+          </SwiperSlide>
+        </Swiper>
       </div>
     </section>
   );
