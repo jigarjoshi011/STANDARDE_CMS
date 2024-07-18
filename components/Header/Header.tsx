@@ -4,6 +4,7 @@ import Link from "next/link";
 import SiteLogo from "../../public/images/site-logo.png";
 import { useRef, useState } from "react";
 import useClickOutside from "@/hooks/useClickOutside";
+import Button from "../Button/Button";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -20,8 +21,8 @@ const Navbar = () => {
             <Image src={SiteLogo} alt="site-logo" className="w-32 h-8" />
           </div>
           <div className="flex items-start lg:hidden" ref={menuRef}>
-            <button
-              onClick={() => setMenuOpen(!menuOpen)}
+            <Button
+              onClickHandler={() => setMenuOpen(!menuOpen)}
               className="text-white focus:outline-none"
             >
               {menuOpen ? (
@@ -33,7 +34,7 @@ const Navbar = () => {
                   <span></span>
                 </div>
               )}
-            </button>
+            </Button>
           </div>
           <nav className="hidden lg:flex space-x-8 xl:space-x-10 text-white ">
             {["Solutions", "Technology", "Resource", "Company", "Contact"].map(
