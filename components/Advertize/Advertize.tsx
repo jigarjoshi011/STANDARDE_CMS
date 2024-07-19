@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { FC } from "react";
-import heroSlider from "../../public/images/hero-slider.png";
+import heroSlider from "../../public/images/AI search result mockup.svg";
 
 const Advertize: FC = () => {
   return (
