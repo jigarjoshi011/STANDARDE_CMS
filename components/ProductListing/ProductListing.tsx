@@ -15,11 +15,10 @@ const ProductListing: FC = () => {
       </div>
       <div className="mx-0 swiper-products">
         <Swiper
-        
-        slidesPerView={5.2}
+          slidesPerView={5.2}
           spaceBetween={30}
           freeMode={true}
-          loop={true}
+          loop={false}
           modules={[FreeMode, Pagination]}
           pagination={{
             enabled: false,

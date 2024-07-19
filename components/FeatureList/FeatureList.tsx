@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination } from "swiper/modules";
-import heroSlider from "../../public/images/hero-slider.png";
+import heroSlider from "../../public/images/AI search result mockup.svg";
 import heroSliderTwo from "../../public/images/slider01.png";
 
 const FeatureList = () => {
