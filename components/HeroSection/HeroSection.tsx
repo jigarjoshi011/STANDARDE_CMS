@@ -13,15 +13,19 @@ const HeroSection = () => {
       {/* <Image src={WaveAnimation} alt="animation" /> */}
 
       <section
-      className="relative text-white min-h-[calc(100vh - 300px)] flex pb-0 px-15px lg:px-14 flex-col justify-center items-center pt-160px py-16 z-0 before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-black/50 before:z-[-1]"
-      style={{
+      className="relative text-white min-h-[calc(100vh - 300px)] flex pb-0 px-15px lg:px-14 flex-col justify-center items-center pt-160px py-16 z-0 "
+     
+    >
+      <div className="absolute top-0 left-0 w-full h-full z-[1] opacity-40 mix-blend-luminosity"  style={{
         backgroundImage: "url('/images/animation.gif')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-      }}
-    >
-        <div className="max-w-4xl mx-auto text-center">
+      }}>
+       
+      </div>
+      <div className="absolute top-0 left-0 w-full h-full bg-bg-primary/30 z-[2] "></div>
+        <div className="max-w-4xl mx-auto text-center z-[3]">
           <h1 className="text-3xl lg:text-5xl xl:text-76px text-text-primary xl:leading-79px font-bold mb-4 ">
             Revolution of Retail Industry
           </h1>

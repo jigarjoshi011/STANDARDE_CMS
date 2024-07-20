@@ -66,7 +66,7 @@ const ProductListing: FC = () => {
           }}
         >
           <SwiperSlide>
-            <div className="bg-card-bg p-8 pb-0 rounded-20px md:rounded-20px lg:rounded-32px h-560px overflow-hidden">
+            <div className="bg-card-bg p-8 pb-0 rounded-20px md:rounded-20px lg:rounded-32px  overflow-hidden">
               <div className="flex items-center justify-between">
                 <div className="relative">
                   <span className="uppercase text-base font-normal block">
@@ -88,18 +88,18 @@ const ProductListing: FC = () => {
                     />
                   </svg>
                 </div>
-              </div>
-              <div className="relative mt-16">
+              </div>  
+              <div className="relative mt-16 h-460px 3xl:h-600px">
                 <Image
                   src={ProductSlideImage1}
                   alt="ProductSlide"
-                  className="mx-auto w-full"
+                  className="mx-auto w-full h-full"
                 />
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="bg-card-bg p-8 pb-0 rounded-20px md:rounded-32px h-560px overflow-hidden">
+            <div className="bg-card-bg p-8 pb-0 rounded-20px md:rounded-32px  overflow-hidden">
               <div className="flex items-center justify-between">
                 <div className="relative">
                   <span className="uppercase text-base font-normal block">
@@ -122,17 +122,17 @@ const ProductListing: FC = () => {
                   </svg>
                 </div>
               </div>
-              <div className="relative mt-16">
+              <div className="relative mt-16 h-460px 3xl:h-600px ">
                 <Image
                   src={ProductSlideImage2}
                   alt="ProductSlide"
-                  className="mx-auto w-full"
+                  className="mx-auto w-full h-full"
                 />
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="bg-card-bg p-8 pb-0 rounded-20px md:rounded-32px h-560px overflow-hidden">
+            <div className="bg-card-bg p-8 pb-0 rounded-20px md:rounded-32px overflow-hidden">
               <div className="flex items-center justify-between">
                 <div className="relative">
                   <span className="uppercase text-base font-normal block">
@@ -155,17 +155,17 @@ const ProductListing: FC = () => {
                   </svg>
                 </div>
               </div>
-              <div className="relative mt-16">
+              <div className="relative mt-16 h-460px 3xl:h-600px ">
                 <Image
                   src={ProductSlideImage1}
                   alt="ProductSlide"
-                  className="mx-auto w-full"
+                  className="mx-auto w-full h-full"
                 />
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="bg-card-bg p-8 pb-0 rounded-20px md:rounded-32px h-560px overflow-hidden">
+            <div className="bg-card-bg p-8 pb-0 rounded-20px md:rounded-32px  overflow-hidden">
               <div className="flex items-center justify-between">
                 <div className="relative">
                   <span className="uppercase text-base font-normal block">
@@ -188,11 +188,11 @@ const ProductListing: FC = () => {
                   </svg>
                 </div>
               </div>
-              <div className="relative mt-16">
+              <div className="relative mt-16 h-460px 3xl:h-600px">
                 <Image
                   src={ProductSlideImage4}
                   alt="ProductSlide"
-                  className="mx-auto w-full"
+                  className="mx-auto w-full h-full"
                 />
               </div>
             </div>

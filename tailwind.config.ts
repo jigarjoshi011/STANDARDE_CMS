@@ -8,6 +8,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        'tablet': '640px',
+        // => @media (min-width: 640px) { ... }
+  
+        'laptop': '1024px',
+        // => @media (min-width: 1024px) { ... }
+  
+        'desktop': '1280px',
+        // => @media (min-width: 1280px) { ... }
+      '3xl': '1640px',
+      },
       container: {
         padding: "1rem",
         center: true,
@@ -69,8 +80,11 @@ const config: Config = {
         "214px": "214px",
         "298px": "298px",
         "348px": "348px",
+        "460px": "460px",
         "560px": "560px",
         "580px": "580px",
+        "600px": "600px",
+        "1640px": "1640px",
         "100dvh": "100dvh",
         unset: "unset",
       },
