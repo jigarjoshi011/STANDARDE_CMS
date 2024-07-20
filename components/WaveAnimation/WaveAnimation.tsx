@@ -99,6 +99,7 @@ const WaveAnimation: React.FC<WaveAnimationProps> = ({ width, height }) => {
 
     return () => {
       if (containerRef.current && renderer.domElement) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         containerRef.current.removeChild(renderer.domElement);
       }
     };
