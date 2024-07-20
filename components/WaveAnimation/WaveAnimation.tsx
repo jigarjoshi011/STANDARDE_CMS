@@ -1,41 +1,26 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 
-const WaveAnimation: React.FC = () => {
+interface WaveAnimationProps {
+  width: number;
+  height: number;
+}
+
+const WaveAnimation: React.FC<WaveAnimationProps> = ({ width, height }) => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
-
-  const updateDimensions = () => {
-    const width = window.innerWidth -25;
-    const height = window.innerHeight + 575;
-    setDimensions({ width, height });
-  };
-
-  useEffect(() => {
-    if (typeof window === "undefined" || !containerRef.current) return;
-
-    updateDimensions();
-    window.addEventListener("resize", updateDimensions);
-
-    return () => {
-      window.removeEventListener("resize", updateDimensions);
-    };
-  }, []);
 
   useEffect(() => {
     if (
       typeof window === "undefined" ||
       !containerRef.current ||
-      dimensions.width === 0
+      width === 0 ||
+      height === 0
     )
       return;
 
-    const isMobile = dimensions.width < 768;
-    const isTablet = dimensions.width >= 768 && dimensions.width < 1024;
-
-    const SEPARATION = isMobile ? 20 : isTablet ? 18 : 14;
-    const AMOUNTX = Math.round(dimensions.width / SEPARATION);
-    const AMOUNTY = Math.round(dimensions.height / SEPARATION);
+    const SEPARATION = 10;
+    const AMOUNTX = Math.round(width / SEPARATION);
+    const AMOUNTY = Math.round(height / SEPARATION);
 
     let camera: THREE.PerspectiveCamera;
     let scene: THREE.Scene;
@@ -45,13 +30,8 @@ const WaveAnimation: React.FC = () => {
     let count = 0;
 
     const init = (): void => {
-      camera = new THREE.PerspectiveCamera(
-        45,
-        dimensions.width / dimensions.height,
-        1,
-        10000
-      );
-      camera.position.z = 500;
+      camera = new THREE.PerspectiveCamera(75, width / height, 1, 10000);
+      camera.position.z = 300;
 
       scene = new THREE.Scene();
 
@@ -76,7 +56,7 @@ const WaveAnimation: React.FC = () => {
 
       const material = new THREE.PointsMaterial({
         color: 0x888888,
-        size: 1.5,
+        size: 1,
         blending: THREE.AdditiveBlending,
         transparent: true,
         sizeAttenuation: false,
@@ -85,9 +65,12 @@ const WaveAnimation: React.FC = () => {
       particles = new THREE.Points(geometry, material);
       scene.add(particles);
 
-      renderer = new THREE.WebGLRenderer({ antialias: true });
-      renderer.setSize(dimensions.width, dimensions.height);
-      renderer.setClearColor(0x000000, 1);
+      renderer = new THREE.WebGLRenderer({
+        antialias: true,
+        alpha: true,
+      });
+      renderer.setSize(width, height);
+      renderer.setClearColor(0x000000, 0);
       containerRef?.current?.appendChild(renderer.domElement);
     };
 
@@ -101,47 +84,34 @@ const WaveAnimation: React.FC = () => {
       for (let ix = 0; ix < AMOUNTX; ix++) {
         for (let iy = 0; iy < AMOUNTY; iy++) {
           positions[i + 2] =
-            Math.sin((ix + count) * 0.3) * 50 +
-            Math.sin((iy + count) * 0.5) * 50;
+            Math.sin((ix + count) * 0.1) * 100 +
+            Math.sin((iy + count) * 0.1) * 100;
           i += 3;
         }
       }
       particles.geometry.attributes.position.needsUpdate = true;
       renderer.render(scene, camera);
-      count += 0.018;
+      count += 0.05;
     };
 
     init();
     animate();
 
-    const handleResize = () => {
-      camera.aspect = dimensions.width / dimensions.height;
-      camera.updateProjectionMatrix();
-      renderer.setSize(dimensions.width, dimensions.height);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
     return () => {
-      window.removeEventListener("resize", handleResize);
       if (containerRef.current && renderer.domElement) {
         containerRef.current.removeChild(renderer.domElement);
       }
     };
-  }, [dimensions]);
+  }, [width, height]);
 
   return (
     <div
       ref={containerRef}
       className="waves"
       style={{
-        position: "absolute",
-        top: 0,
-        left: 0,
-        width: "100%",
-        height: "100%",
-        zIndex: -1,
+        width: `${width}px`,
+        height: `${height}px`,
+        overflow: "hidden",
       }}
     />
   );

@@ -15,7 +15,7 @@ import Button from "../Button/Button";
 
 const RetailServices = () => {
   return (
-    <section className="text-white py-6 md:py-10 xl:py-16 px-15px lg:px-14">
+    <section className="text-white py-6 md:py-10 xl:py-16 px-15px lg:px-14 ">
       <div className="max-w-[80rem] mx-auto">
         <div className="text-center mb-12">
           <Button className="bg-btn-primary text-white px-6 py-3 rounded-full font-normal">
