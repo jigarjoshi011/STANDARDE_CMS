@@ -1,14 +1,11 @@
 import Image from "next/image";
 import React from "react";
-
-import Slider, { Settings } from "react-slick";
 import Gridone from "../../public/images/osSystem.png";
 import Gridtwo from "../../public/images/geidtwo.png";
 import Gridthree from "../../public/images/chart.svg";
 import Gridfour from "../../public/images/gridfour.png";
-import Gridfive from "../../public/images/gridsix.png";
+import Gridfive from "../../public/images/Footfall.svg";
 import Store from "../../public/images/store.svg";
-import Gridsix from "../../public/images/avtar-grp-hd.png";
 import Mobproduct from "../../public/images/mobile-view-product.png";
 import Grideight from "../../public/images/customer.svg";
 import Button from "../Button/Button";

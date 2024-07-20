@@ -1,7 +1,7 @@
 import Image from "next/image";
-import ProductSlideImage1 from "../../public/images/product_01.png";
-import ProductSlideImage2 from "../../public/images/product_02.png";
-import ProductSlideImage4 from "../../public/images/product_04.png";
+import ProductSlideImage1 from "../../public/images/HIGHLIGHT app.png";
+import ProductSlideImage2 from "../../public/images/POS platforms..png";
+import ProductSlideImage4 from "../../public/images/PARTNER.png";
 import { FC } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination } from "swiper/modules";
