@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination } from "swiper/modules";
 const ProductListing: FC = () => {
   return (
-    <section className="text-white py-10 lg:py-14 pb-8 xl:py-100px overflow-hidden">
+    <section className="text-white py-6 lg:py-14 xl:pb-8 xl:py-100px overflow-hidden ">
       <div className="container mx-0 pr-0 lg:px-24 md:px-10 xl:px-32 sm:px-4">
         <h2 className="text-16px md:text-32px text-text-primary font-semibold mb-10">
           Our products
