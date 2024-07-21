@@ -17,10 +17,10 @@ const Navbar = () => {
     <header className="border-black/10 py-4 px-15px lg:px-14 xl:px-32 backdrop-blur-md w-full fixed top-0 z-[999]">
       <div className="container mx-auto px-0">
         <div className="flex justify-between items-center">
-          <div className="navbar-brand text-white font-bold bg-black">
-            <Image src={SiteLogo} alt="site-logo" className="w-32 h-8" />
+          <div className="navbar-brand  ">
+            <a href="#" className="uppercase font-semibold text-2xl text-white">standarde</a>
           </div>
-          <div className="flex items-start lg:hidden" ref={menuRef}>
+          <div className="flex items-start lg:hidden cs-btns" ref={menuRef}>
             <Button
               onClickHandler={() => setMenuOpen(!menuOpen)}
               className="text-white focus:outline-none"

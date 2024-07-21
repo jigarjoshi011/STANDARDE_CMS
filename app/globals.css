@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -20,6 +21,12 @@ body {
 }
 .font-raleway{
   font-family: "Raleway", sans-serif;
+}
+.font-montserrat{
+  font-family: "Montserrat", sans-serif;
+}
+.font-manrope{
+  font-family: "Manrope", sans-serif;
 }
 .bg-radial {
   background: radial-gradient(295.56% 249.54% at 2.89% 5.88%,
@@ -89,6 +96,32 @@ body {
 .main-container {
   grid-template-columns: 18% 14% 14% 12% 25%;
 }
+.swiper-pagination {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #ffffff; /* Changed to white for visibility */
+  opacity: 0.5;
+  margin: 0 5px;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #007aff;
+}
+.swiper-wrapper{
+  overflow: unset !important;
+}
+
 @media only screen and (max-width: 1024px) {
   .main-container {
     grid-template-columns: unset !important;
@@ -255,4 +288,7 @@ body {
 
 .swiper-slide-active {
   opacity: 1;
+}
+.cs-btns div{
+display: flex;
 }

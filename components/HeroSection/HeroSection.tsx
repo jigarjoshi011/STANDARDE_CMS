@@ -24,7 +24,7 @@ const HeroSection = () => {
       }}>
        
       </div>
-      <div className="absolute top-0 left-0 w-full h-full bg-bg-primary/30 z-[2] "></div>
+      {/* <div className="absolute top-0 left-0 w-full h-full bg-bg-primary/30 z-[2] "></div> */}
         <div className="max-w-4xl mx-auto text-center z-[3]">
           <h1 className="text-3xl lg:text-5xl xl:text-76px text-text-primary xl:leading-79px font-bold mb-4 ">
             Revolution of Retail Industry
@@ -46,7 +46,7 @@ const HeroSection = () => {
             pesto mayo rib ipsum melted sausage lovers. Large wing green stuffed
             crust pan stuffed.
           </p>
-          <div className="mx-auto overflow-hidden max-h-580px hero-img ">
+          <div className="mx-auto overflow-hidden max-h-480px xl:max-h-580px hero-img ">
             <div>
               <Image src={HeroImg} alt="hero-img" />
             </div>

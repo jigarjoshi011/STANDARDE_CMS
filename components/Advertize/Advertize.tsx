@@ -64,11 +64,11 @@ const Advertize: FC = () => {
             </div>
 
             <div className="w-full lg:w-1/2 flex items-center z-10 ml-16">
-              <div className="xl:max-h-348px md:max-h-64 md:h-64 xl:h-348px mt-6">
+              <div className="xl:max-h-[300px] md:max-h-64 md:h-64 xl:h-348px mt-6 ">
                 <Image
                   src={heroSlider}
                   alt="hero-mg"
-                  className="w-full h-full rounded-t-2xl"
+                  className="w-full h-full rounded-t-2xl md:ml-24 3xl:ml-48 "
                 />
               </div>
             </div>

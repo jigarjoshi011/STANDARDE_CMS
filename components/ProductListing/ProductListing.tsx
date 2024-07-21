@@ -89,7 +89,7 @@ const ProductListing: FC = () => {
                   </svg>
                 </div>
               </div>  
-              <div className="relative mt-16 h-460px 3xl:h-600px">
+              <div className="relative mt-16 h-380px  xl:h-460px 3xl:h-600px">
                 <Image
                   src={ProductSlideImage1}
                   alt="ProductSlide"
@@ -122,7 +122,7 @@ const ProductListing: FC = () => {
                   </svg>
                 </div>
               </div>
-              <div className="relative mt-16 h-460px 3xl:h-600px ">
+              <div className="relative mt-16 h-380px xl:h-460px 3xl:h-600px ">
                 <Image
                   src={ProductSlideImage2}
                   alt="ProductSlide"
@@ -155,7 +155,7 @@ const ProductListing: FC = () => {
                   </svg>
                 </div>
               </div>
-              <div className="relative mt-16 h-460px 3xl:h-600px ">
+              <div className="relative mt-16 h-380px xl:h-460px 3xl:h-600px ">
                 <Image
                   src={ProductSlideImage1}
                   alt="ProductSlide"
@@ -188,7 +188,7 @@ const ProductListing: FC = () => {
                   </svg>
                 </div>
               </div>
-              <div className="relative mt-16 h-460px 3xl:h-600px">
+              <div className="relative mt-16 h-380px xl:h-460px 3xl:h-600px">
                 <Image
                   src={ProductSlideImage4}
                   alt="ProductSlide"

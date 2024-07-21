@@ -12,8 +12,8 @@ const Footer = () => {
     <footer className="text-white py-6">
       <div className=" lg:w-full mx-0 px-15px md:px-8  lg:px-14  xl:px-32">
         <div className="flex flex-col space-y-6 sm:space-y-0 sm:flex-row sm:justify-between sm:items-start md:items-center">
-          <div className="flex flex-col  md:items-center items-start space-y-4 md:space-y-8">
-            <Image src={SiteLogo} alt="site-logo" className="w-52 h-12" />
+          <div className="flex flex-col  space-y-4 md:space-y-8">
+          <a href="#" className="uppercase font-semibold text-3xl text-white">standarde</a>
             <div className="flex space-x-4 md:space-x-6">
               <Link
                 href={"#"}
@@ -58,7 +58,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="text-sm text-left md:text-center sm:text-right ">
-            <div className="flex items-center justify-start md:justify-end mb-6">
+            <div className="flex items-center justify-start md:justify-end mb-3 xl:mb-6">
               <svg
                 className="w-4 h-4 mr-2"
                 fill="none"
@@ -75,7 +75,7 @@ const Footer = () => {
               </svg>
               <Link
                 href="#"
-                className="text-footer-primary/40 transition-all ease-in-out duration-300 hover:text-footer-primary text-lg font-normal "
+                className="text-footer-primary/40 font-montserrat transition-all font-montserrat ease-in-out duration-300 hover:text-footer-primary text-lg font-normal "
               >
                 +1 516-342-XXXX
               </Link>
@@ -110,27 +110,27 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="text-footer-primary/60 hover:text-footer-primary"
+                  className="text-footer-primary/60 font-manrope font-normal hover:text-footer-primary"
                 >
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <p className="text-footer-primary/60 text-sm font-normal px-3.5">
+                <p className="text-footer-primary/60 text-sm font-normal font-m px-3.5">
                   .
                 </p>
               </li>
               <li>
                 <a
                   href="#"
-                  className="text-footer-primary/60 hover:text-footer-primary hover:underline text-sm font-normal"
+                  className="text-footer-primary/60 font-manrope hover:text-footer-primary hover:underline text-sm font-normal"
                 >
                   Terms of Conditions
                 </a>
               </li>
             </ul>
           </div>
-          <p className="text-footer-primary/60 text-sm font-normal">
+          <p className="text-footer-primary/60 text-sm font-normal font-montserrat">
             Attentions Data Labs LLC. All rights reserved.
           </p>
         </div>
