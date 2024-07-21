@@ -22,7 +22,9 @@ const ProductListing: FC = () => {
           modules={[FreeMode, Pagination]}
           pagination={{
             enabled: false,
+            el: ".swiper-pagination-productlist",
             clickable: false,
+            bulletActiveClass: "swiper-pagination-bullet-active",
             bulletClass: "swiper-pagination-bullet",
           }}
           breakpoints={{
@@ -33,6 +35,7 @@ const ProductListing: FC = () => {
                 enabled: true,
                 clickable: true,
                 bulletClass: "swiper-pagination-bullet",
+                bulletActiveClass: "swiper-pagination-bullet-active",
               },
             },
             650: {
@@ -41,6 +44,7 @@ const ProductListing: FC = () => {
                 enabled: true,
                 clickable: true,
                 bulletClass: "swiper-pagination-bullet",
+                bulletActiveClass: "swiper-pagination-bullet-active",
               },
             },
             800: {
@@ -88,7 +92,7 @@ const ProductListing: FC = () => {
                     />
                   </svg>
                 </div>
-              </div>  
+              </div>
               <div className="relative mt-16 h-380px  xl:h-460px 3xl:h-600px">
                 <Image
                   src={ProductSlideImage1}
@@ -199,6 +203,7 @@ const ProductListing: FC = () => {
           </SwiperSlide>
         </Swiper>
       </div>
+      <div className="swiper-pagination-productlist"></div>
     </section>
   );
 };
