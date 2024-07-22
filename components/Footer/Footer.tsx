@@ -97,7 +97,7 @@ const Footer = () => {
               </svg>
               <Link
                 href="#"
-                className="text-footer-primary/40 transition-all ease-in-out duration-300 hover:text-footer-primary text-lg font-normal"
+                className="text-footer-primary/40 transition-all font-montserrat ease-in-out duration-300 hover:text-footer-primary text-lg font-normal"
               >
                 info@neuralnextsystems.com
               </Link>
