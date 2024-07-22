@@ -13,7 +13,9 @@ const Footer = () => {
       <div className=" lg:w-full mx-0 px-15px md:px-8  lg:px-14  xl:px-32">
         <div className="flex flex-col space-y-6 sm:space-y-0 sm:flex-row sm:justify-between sm:items-start md:items-center">
           <div className="flex flex-col  space-y-4 md:space-y-8">
-          <a href="#" className="uppercase font-semibold text-3xl text-white">standarde</a>
+            <a href="#" className="uppercase font-semibold text-3xl text-white">
+              standarde
+            </a>
             <div className="flex space-x-4 md:space-x-6">
               <Link
                 href={"#"}
@@ -97,7 +99,7 @@ const Footer = () => {
               </svg>
               <Link
                 href="#"
-                className="text-footer-primary/40 transition-all ease-in-out duration-300 hover:text-footer-primary text-lg font-normal"
+                className="text-footer-primary/40 transition-all ease-in-out duration-300 hover:text-footer-primary text-lg font-normal font-montserrat"
               >
                 info@neuralnextsystems.com
               </Link>
