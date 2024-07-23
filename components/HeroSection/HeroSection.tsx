@@ -13,7 +13,7 @@ const HeroSection = () => {
       {/* <Image src={WaveAnimation} alt="animation" /> */}
 
       <section
-      className="relative text-white min-h-[calc(100vh - 300px)] flex pb-0 px-15px lg:px-14 flex-col justify-center items-center pt-160px py-16 z-0 "
+      className="relative text-white min-h-[calc(100vh-300px)] flex pb-0 px-15px lg:px-14 flex-col justify-center items-center pt-160px py-16 z-0 "
      
     >
       <div className="absolute top-0 left-0 w-full h-full z-[1] opacity-40 mix-blend-luminosity"  style={{
@@ -46,9 +46,9 @@ const HeroSection = () => {
             pesto mayo rib ipsum melted sausage lovers. Large wing green stuffed
             crust pan stuffed.
           </p>
-          <div className="mx-auto overflow-hidden max-h-480px xl:max-h-580px hero-img ">
-            <div>
-              <Image src={HeroImg} alt="hero-img" />
+          <div className="mx-auto overflow-hidden max-h-480px xl:max-h-600px hero-img ">
+            <div className="mt-2">
+              <Image src={HeroImg} alt="hero-img" className="w-full h-full" />
             </div>
           </div>
         </div>

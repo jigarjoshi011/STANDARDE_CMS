@@ -1,6 +1,6 @@
 import Image from "next/image";
-import ProductSlideImage1 from "../../public/images/HIGHLIGHT app.png";
-import ProductSlideImage2 from "../../public/images/POS platforms..png";
+import ProductSlideImage1 from "../../public/images/hight-img-01.png";
+import ProductSlideImage2 from "../../public/images/product-02.png";
 import ProductSlideImage4 from "../../public/images/PARTNER.png";
 import { FC } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -66,13 +66,13 @@ const ProductListing: FC = () => {
           }}
         >
           <SwiperSlide>
-            <div className="bg-card-bg p-8 pb-0 rounded-20px md:rounded-20px lg:rounded-32px  overflow-hidden">
+            <div className="bg-card-bg p-8 pb-0 rounded-20px md:rounded-20px lg:rounded-32px  overflow-hidden h-470px md:h-560px">
               <div className="flex items-center justify-between">
                 <div className="relative">
                   <span className="uppercase text-base font-normal block">
                     STANDARDE
                   </span>
-                  <h5 className="text-xl font-semibold">HIGHLIGHT</h5>
+                  <h5 className="text-xl font-semibold mt-1">HIGHLIGHT</h5>
                 </div>
                 <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center">
                   <svg
@@ -89,7 +89,7 @@ const ProductListing: FC = () => {
                   </svg>
                 </div>
               </div>  
-              <div className="relative mt-16 h-380px  xl:h-460px 3xl:h-600px">
+              <div className="relative mt-16">
                 <Image
                   src={ProductSlideImage1}
                   alt="ProductSlide"
@@ -99,13 +99,13 @@ const ProductListing: FC = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="bg-card-bg p-8 pb-0 rounded-20px md:rounded-32px  overflow-hidden">
+            <div className="bg-card-bg p-8 pb-0 rounded-20px md:rounded-32px  overflow-hidden h-470px md:h-560px">
               <div className="flex items-center justify-between">
                 <div className="relative">
                   <span className="uppercase text-base font-normal block">
                     STANDARDE
                   </span>
-                  <h5 className="text-xl font-semibold"> POS platforms.</h5>
+                  <h5 className="text-xl font-semibold mt-1"> POS platforms.</h5>
                 </div>
                 <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center">
                   <svg
@@ -122,7 +122,7 @@ const ProductListing: FC = () => {
                   </svg>
                 </div>
               </div>
-              <div className="relative mt-16 h-380px xl:h-460px 3xl:h-600px ">
+              <div className="relative mt-16">
                 <Image
                   src={ProductSlideImage2}
                   alt="ProductSlide"
@@ -132,13 +132,13 @@ const ProductListing: FC = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="bg-card-bg p-8 pb-0 rounded-20px md:rounded-32px overflow-hidden">
+            <div className="bg-card-bg p-8 pb-0 rounded-20px md:rounded-32px overflow-hidden h-470px md:h-560px">
               <div className="flex items-center justify-between">
                 <div className="relative">
                   <span className="uppercase text-base font-normal block">
                     STANDARDE
                   </span>
-                  <h5 className="text-xl font-semibold">ERP platforms.</h5>
+                  <h5 className="text-xl font-semibold mt-1">ERP platforms.</h5>
                 </div>
                 <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center">
                   <svg
@@ -155,7 +155,7 @@ const ProductListing: FC = () => {
                   </svg>
                 </div>
               </div>
-              <div className="relative mt-16 h-380px xl:h-460px 3xl:h-600px ">
+              <div className="relative mt-16 ">
                 <Image
                   src={ProductSlideImage1}
                   alt="ProductSlide"
@@ -165,13 +165,13 @@ const ProductListing: FC = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="bg-card-bg p-8 pb-0 rounded-20px md:rounded-32px  overflow-hidden">
+            <div className="bg-card-bg p-8 pb-0 rounded-20px md:rounded-32px h-470px md:h-560px  overflow-hidden">
               <div className="flex items-center justify-between">
                 <div className="relative">
                   <span className="uppercase text-base font-normal block">
                     STANDARDE
                   </span>
-                  <h5 className="text-xl font-semibold">PARTNER</h5>
+                  <h5 className="text-xl font-semibold mt-1">PARTNER</h5>
                 </div>
                 <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center">
                   <svg
@@ -188,7 +188,7 @@ const ProductListing: FC = () => {
                   </svg>
                 </div>
               </div>
-              <div className="relative mt-16 h-380px xl:h-460px 3xl:h-600px">
+              <div className="relative mt-16 ">
                 <Image
                   src={ProductSlideImage4}
                   alt="ProductSlide"

@@ -68,7 +68,7 @@ const RetailServices = () => {
             </div>
             <div className="number-state !w-full lg:!w-1/2 xl:!w-full">
               <div className=" bg-white/5 w-full h-full border border-white/10 p-8 rounded-20px">
-                <div className="relative ">
+                <div className="relative flex items-end gap-5">
                   <h5 className="text-80px text-text-fifth font-bold leading-none">
                     2.5x
                   </h5>
