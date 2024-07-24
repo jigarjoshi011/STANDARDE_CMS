@@ -23,9 +23,11 @@ const FeatureList = () => {
           centeredSlides={true}
           modules={[FreeMode, Pagination]}
           pagination={{
-            enabled: false,
-            clickable: false,
+            enabled:false,
+            el: ".swiper-pagination-custom",
+            clickable: true,
             bulletClass: "swiper-pagination-bullet",
+            bulletActiveClass: "swiper-pagination-bullet-active",
           }}
           breakpoints={{
             320: {
@@ -36,6 +38,7 @@ const FeatureList = () => {
                 enabled: true,
                 clickable: true,
                 bulletClass: "swiper-pagination-bullet",
+                bulletActiveClass: "swiper-pagination-bullet-active",
               },
             },
             650: {
@@ -46,16 +49,18 @@ const FeatureList = () => {
                 enabled: true,
                 clickable: true,
                 bulletClass: "swiper-pagination-bullet",
+                bulletActiveClass: "swiper-pagination-bullet-active",
               },
             },
             800: {
               width: 740,
               slidesPerView: 1.1,
-              spaceBetween: 20,
+              spaceBetween: 10,
               pagination: {
                 enabled: true,
                 clickable: true,
                 bulletClass: "swiper-pagination-bullet",
+                bulletActiveClass: "swiper-pagination-bullet-active",
               },
             },
             960: {
@@ -82,12 +87,12 @@ const FeatureList = () => {
                 <div className="slider flex transition-transform duration-300 ease-in-out">
                   <div className="card h-[calc(100vh-342px)] md:h-[358px] overflow-hidden lg:h-[436px] xl:h-[550px] flex-shrink-0 w-full bg-card-primary rounded-20px md:rounded-3xl xl:rounded-40px  px-8 md:px-20 py-9 lg:px-112px lg:py-80px pb-0 lg:mr-4 text-center">
                     <div>
-                      <h3 className="text-lg md:text-xl lg:text-28px font-medium !leading-2.8rem mb-2">
+                      <h3 className="text-lg md:text-xl lg:text-28px font-medium xl:!leading-2.8rem mb-2">
                         Pizza ipsum dolor meat lovers buffalo. Marinara meatball
                         pan hand large Philly large spinach. Pan white Chicago
                         string.
                       </h3>
-                      <div className="overflow-hidden mt-10 md:mt-14 lg:mt-16">
+                      <div className="overflow-hidden mt-32 md:mt-14 lg:mt-16">
                         <Image
                           src={heroSlider}
                           alt="slider"
@@ -155,7 +160,7 @@ const FeatureList = () => {
                           </p>
                       </div>
                       <div className="overflow-hidden w-full md:w-1/2 flex justify-center md:justify-end mt-20 md:mt-0">
-                        <div className="relative h-[calc(100vh-640px)] md:h-[calc(100vh-750px)] lg:h-[calc(100vh-1010px)] xl:h-[calc(100vh-350px)] 3xl:h-[calc(100vh-636px)]">
+                        <div className="relative w-40 lg:w-212px  xl:w-270px h-full">
                           <Image
                             src={heroSliderThree}
                             alt="slider"
@@ -194,6 +199,7 @@ const FeatureList = () => {
           
         </Swiper>
       </div>
+      <div className="swiper-pagination-custom"></div>
     </section>
   );
 };

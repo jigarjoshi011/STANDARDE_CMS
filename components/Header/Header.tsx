@@ -42,7 +42,7 @@ const Navbar = () => {
                 <Link
                   key={item}
                   href="#"
-                  className="hover:text-gray-300 hover:opacity-100 opacity-60 text-sm xl:text-base font-normal leading-6 text-left"
+                  className="hover:text-gray-300 hover:opacity-100 opacity-70 text-sm xl:text-base font-normal leading-6 text-left"
                 >
                   {item}
                 </Link>

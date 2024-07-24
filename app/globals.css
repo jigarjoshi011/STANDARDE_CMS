@@ -291,3 +291,30 @@ body {
 .cs-btns div{
 display: flex;
 }
+
+.swiper-pagination-custom {
+  position: static;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.swiper-pagination-productlist {
+  position: static;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  opacity: 0.5;
+  margin: 0 5px;
+  background: gray !important;
+
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff !important;
+}
