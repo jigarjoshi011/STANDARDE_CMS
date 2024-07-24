@@ -6,7 +6,7 @@ import Erp from "../../public/images/ERP.png";
 import Pos from "../../public/images/POS.png";
 import { FC } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Pagination } from "swiper/modules";
+import { FreeMode, Mousewheel, Pagination } from "swiper/modules";
 const ProductListing: FC = () => {
   return (
     <section className="text-white py-10 lg:py-14 pb-8 xl:py-100px overflow-hidden">
@@ -21,7 +21,13 @@ const ProductListing: FC = () => {
           spaceBetween={30}
           freeMode={true}
           loop={false}
-          modules={[FreeMode, Pagination]}
+          modules={[FreeMode, Pagination, Mousewheel]}
+          mousewheel={{
+            forceToAxis: true,
+            sensitivity: 1,
+            releaseOnEdges: true,
+          }}
+          noSwiping={true}
           pagination={{
             enabled: false,
             el: ".swiper-pagination-productlist",
@@ -94,7 +100,7 @@ const ProductListing: FC = () => {
                     />
                   </svg>
                 </div>
-              </div>  
+              </div>
               <div className="relative mt-16 pl-8">
                 <Image
                   src={ProductSlideImagehigh}
@@ -144,7 +150,9 @@ const ProductListing: FC = () => {
                   <span className="uppercase text-base font-normal block">
                     STANDARDE
                   </span>
-                  <h5 className="text-xl font-semibold mt-1">Sales platforms.</h5>
+                  <h5 className="text-xl font-semibold mt-1">
+                    Sales platforms.
+                  </h5>
                 </div>
                 <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center ">
                   <svg

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Pagination } from "swiper/modules";
+import { FreeMode, Mousewheel, Pagination } from "swiper/modules";
 import heroSlider from "../../public/images/slider-00.png";
 import heroSliderTwo from "../../public/images/slider01.png";
 import heroSliderThree from "../../public/images/slider03.png";
@@ -21,14 +21,20 @@ const FeatureList = () => {
           spaceBetween={30}
           freeMode={true}
           centeredSlides={true}
-          modules={[FreeMode, Pagination]}
+          modules={[FreeMode, Pagination, Mousewheel]}
           pagination={{
-            enabled:false,
+            enabled: false,
             el: ".swiper-pagination-custom",
             clickable: true,
             bulletClass: "swiper-pagination-bullet",
             bulletActiveClass: "swiper-pagination-bullet-active",
           }}
+          mousewheel={{
+            forceToAxis: true,
+            sensitivity: 1,
+            releaseOnEdges: true,
+          }}
+          noSwiping={true}
           breakpoints={{
             320: {
               width: 320,
@@ -126,7 +132,7 @@ const FeatureList = () => {
                         </div>
                       </div>
                       <div className="overflow-hidden w-full md:w-1/2 flex justify-center md:justify-end mt-20 md:mt-0">
-                        <div className="object-cover w-32 md:w-48 lg:w-60 xl:w-full h-full xl:h-30rem mt-3 md:mt-0">
+                        <div className="object-cover w-32 md:w-48 lg:w-60 xl:w-full h-full mt-3 md:mt-0">
                           <Image
                             src={heroSliderTwo}
                             alt="slider"
@@ -147,17 +153,16 @@ const FeatureList = () => {
                   <div className="card h-[calc(100vh-342px)] md:h-[358px] lg:h-[436px] overflow-hidden xl:h-[580px] flex-shrink-0 w-full bg-bg-fifth rounded-20px md:rounded-3xl xl:rounded-40px  px-8 md:px-14 xl:px-112px py-8 md:py-10 xl:py-50px pb-0 mr-4">
                     <div className="flex flex-wrap items-center">
                       <div className="relative w-full md:w-1/2">
-                        
-                          <h3 className="text-xl lg:text-28px font-medium leading-10 text-text-primary mb-2">
-                            Pizza ipsum dolor meat lovers buffalo. Marinara
-                            meatball pan hand large Philly large.
-                          </h3>
-                          <p className="text-text-second hidden md:block text-sm lg:text-base font-normal">
-                            Pizza ipsum dolor meat lovers buffalo. Olives
-                            pineapple Chicago pesto mayo rib ipsum melted
-                            sausage lovers. Large wing green stuffed crust pan
-                            stuffed. Extra pineapple chicken burnt party fresh.
-                          </p>
+                        <h3 className="text-xl lg:text-28px font-medium leading-10 text-text-primary mb-2">
+                          Pizza ipsum dolor meat lovers buffalo. Marinara
+                          meatball pan hand large Philly large.
+                        </h3>
+                        <p className="text-text-second hidden md:block text-sm lg:text-base font-normal">
+                          Pizza ipsum dolor meat lovers buffalo. Olives
+                          pineapple Chicago pesto mayo rib ipsum melted sausage
+                          lovers. Large wing green stuffed crust pan stuffed.
+                          Extra pineapple chicken burnt party fresh.
+                        </p>
                       </div>
                       <div className="overflow-hidden w-full md:w-1/2 flex justify-center md:justify-end mt-20 md:mt-0">
                         <div className="relative w-40 lg:w-212px  xl:w-285px h-full">
@@ -181,9 +186,11 @@ const FeatureList = () => {
                   <div className="card h-[calc(100vh-342px)] md:h-[358px] overflow-hidden lg:h-[436px] xl:h-[580px] flex-shrink-0 w-full bg-bg-fourth rounded-20px md:rounded-3xl xl:rounded-40px  px-8 md:px-20 py-9 lg:px-112px lg:py-80px pb-0 lg:mr-4 text-center">
                     <div>
                       <h3 className="text-lg md:text-xl lg:text-28px font-medium text-text-primary  xl:!leading-2.8rem mb-2">
-                      Pizza ipsum dolor meat lovers buffalo. Marinara meatball pan hand large Philly large spinach. Pan white Chicago string.
+                        Pizza ipsum dolor meat lovers buffalo. Marinara meatball
+                        pan hand large Philly large spinach. Pan white Chicago
+                        string.
                       </h3>
-                      <div className="overflow-hidden mt-10 md:mt-14 lg:mt-16">
+                      <div className="overflow-hidden mt-10 md:mt-14">
                         <Image
                           src={heroSliderFour}
                           alt="slider"
@@ -196,8 +203,6 @@ const FeatureList = () => {
               </div>
             </div>
           </SwiperSlide>
-          
-          
         </Swiper>
       </div>
       <div className="swiper-pagination-custom"></div>
