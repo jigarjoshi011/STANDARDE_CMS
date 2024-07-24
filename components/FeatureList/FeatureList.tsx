@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination } from "swiper/modules";
-import heroSlider from "../../public/images/AI search result mockup.svg";
+import heroSlider from "../../public/images/slider-00.png";
 import heroSliderTwo from "../../public/images/slider01.png";
 import heroSliderThree from "../../public/images/slider03.png";
 import heroSliderFour from "../../public/images/slider04.png";
@@ -85,7 +85,7 @@ const FeatureList = () => {
             <div className="!w-full h-full ">
               <div className="slider-container relative">
                 <div className="slider flex transition-transform duration-300 ease-in-out">
-                  <div className="card h-[calc(100vh-342px)] md:h-[358px] overflow-hidden lg:h-[436px] xl:h-[550px] flex-shrink-0 w-full bg-card-primary rounded-20px md:rounded-3xl xl:rounded-40px  px-8 md:px-20 py-9 lg:px-112px lg:py-80px pb-0 lg:mr-4 text-center">
+                  <div className="card h-[calc(100vh-342px)] md:h-[358px] overflow-hidden lg:h-[436px] xl:h-[580px] flex-shrink-0 w-full bg-card-primary rounded-20px md:rounded-3xl xl:rounded-40px  px-8 md:px-20 py-9 lg:px-112px lg:py-80px pb-0 lg:mr-4 text-center">
                     <div>
                       <h3 className="text-lg md:text-xl lg:text-28px font-medium xl:!leading-2.8rem mb-2">
                         Pizza ipsum dolor meat lovers buffalo. Marinara meatball
@@ -109,7 +109,7 @@ const FeatureList = () => {
             <div className="!w-full h-full">
               <div className="slider-container relative">
                 <div className="slider flex transition-transform duration-300 ease-in-out">
-                  <div className="card h-[calc(100vh-342px)] md:h-[358px] lg:h-[436px] overflow-hidden xl:h-[550px] flex-shrink-0 w-full bg-bg-third rounded-20px md:rounded-3xl xl:rounded-40px  px-8 md:px-14 xl:px-112px py-8 md:py-14 xl:py-80px pb-0 mr-4">
+                  <div className="card h-[calc(100vh-342px)] md:h-[358px] lg:h-[436px] overflow-hidden xl:h-[580px] flex-shrink-0 w-full bg-bg-third rounded-20px md:rounded-3xl xl:rounded-40px  px-8 md:px-14 xl:px-112px py-8 md:py-14  pb-0 mr-4 !pr-0">
                     <div className="flex flex-wrap">
                       <div className="relative w-full md:w-1/2">
                         <div className="max-w-full lg:max-w-96 ">
@@ -144,7 +144,7 @@ const FeatureList = () => {
             <div className="!w-full h-full">
               <div className="slider-container relative">
                 <div className="slider flex transition-transform duration-300 ease-in-out">
-                  <div className="card h-[calc(100vh-342px)] md:h-[358px] lg:h-[436px] overflow-hidden xl:h-[550px] flex-shrink-0 w-full bg-bg-fifth rounded-20px md:rounded-3xl xl:rounded-40px  px-8 md:px-14 xl:px-112px py-8 md:py-10 xl:py-50px pb-0 mr-4">
+                  <div className="card h-[calc(100vh-342px)] md:h-[358px] lg:h-[436px] overflow-hidden xl:h-[580px] flex-shrink-0 w-full bg-bg-fifth rounded-20px md:rounded-3xl xl:rounded-40px  px-8 md:px-14 xl:px-112px py-8 md:py-10 xl:py-50px pb-0 mr-4">
                     <div className="flex flex-wrap items-center">
                       <div className="relative w-full md:w-1/2">
                         
@@ -160,7 +160,7 @@ const FeatureList = () => {
                           </p>
                       </div>
                       <div className="overflow-hidden w-full md:w-1/2 flex justify-center md:justify-end mt-20 md:mt-0">
-                        <div className="relative w-40 lg:w-212px  xl:w-270px h-full">
+                        <div className="relative w-40 lg:w-212px  xl:w-285px h-full">
                           <Image
                             src={heroSliderThree}
                             alt="slider"
@@ -178,7 +178,7 @@ const FeatureList = () => {
             <div className="!w-full h-full ">
               <div className="slider-container relative">
                 <div className="slider flex transition-transform duration-300 ease-in-out">
-                  <div className="card h-[calc(100vh-342px)] md:h-[358px] overflow-hidden lg:h-[436px] xl:h-[550px] flex-shrink-0 w-full bg-bg-fourth rounded-20px md:rounded-3xl xl:rounded-40px  px-8 md:px-20 py-9 lg:px-112px lg:py-80px pb-0 lg:mr-4 text-center">
+                  <div className="card h-[calc(100vh-342px)] md:h-[358px] overflow-hidden lg:h-[436px] xl:h-[580px] flex-shrink-0 w-full bg-bg-fourth rounded-20px md:rounded-3xl xl:rounded-40px  px-8 md:px-20 py-9 lg:px-112px lg:py-80px pb-0 lg:mr-4 text-center">
                     <div>
                       <h3 className="text-lg md:text-xl lg:text-28px font-medium text-text-primary  xl:!leading-2.8rem mb-2">
                       Pizza ipsum dolor meat lovers buffalo. Marinara meatball pan hand large Philly large spinach. Pan white Chicago string.
@@ -196,6 +196,7 @@ const FeatureList = () => {
               </div>
             </div>
           </SwiperSlide>
+          
           
         </Swiper>
       </div>
