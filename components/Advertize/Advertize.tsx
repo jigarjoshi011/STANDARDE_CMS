@@ -2,6 +2,7 @@ import Image from "next/image";
 import React, { FC } from "react";
 // import heroSlider from "../../public/images/AI search result mockup.svg";
 import heroSlider from "../../public/images/ai-search.png";
+import Link from "next/link";
 
 const Advertize: FC = () => {
   return (
@@ -11,12 +12,12 @@ const Advertize: FC = () => {
           <div className="flex flex-col lg:flex-row ">
             <div className="w-full lg:w-1/2 mb-8 lg:mb-0 lg:pr-8 z-10 xl:pt-6 xl:pl-4">
               <h2 className="text-xl md:text-2xl lg:!leading-3.25rem lg:mb-3 lg:text-3xl xl:text-40px font-semibold mb-4 md:mb-6">
-                Pizza ipsum dolor meat lovers buffalo.
+                Want to give your Brand an edge?
               </h2>
               <ul className="flex flex-wrap  mb-6  gap-y-2 gap-x-4">
                 {[
                   "Free Trial",
-                  "Consult API Expert",
+                  "Enterprise-Ready",
                   "Robust Customer Support",
                 ].map((item, index) => (
                   <li key={index} className="flex items-center   gap-2">
@@ -37,11 +38,11 @@ const Advertize: FC = () => {
                   </li>
                 ))}
               </ul>
-              <a
-                href="#"
+              <Link
+                href={"https://www.highlight.standarde.in"}
                 className="inline-flex items-center px-6 py-3 border border-white rounded-full text-sm md:text-base font-medium hover:bg-white hover:text-black transition-colors duration-300"
               >
-                Try for Free
+                Learn More
                 <svg
                   className="fill-white w-3 h-3 ml-3.5"
                   viewBox="0 0 12 12"
@@ -61,7 +62,7 @@ const Advertize: FC = () => {
                     fill="white"
                   />
                 </svg>
-              </a>
+              </Link>
             </div>
 
             <div className="w-full lg:w-1/2 flex items-center z-10 ml-16">

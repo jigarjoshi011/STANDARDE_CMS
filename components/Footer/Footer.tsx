@@ -56,9 +56,9 @@ const Footer = () => {
                   <path
                     d="M15 9.4C18.0927 9.4 20.6 11.9072 20.6 15C20.6 18.0927 18.0927 20.6 15 20.6C11.9072 20.6 9.4 18.0927 9.4 15C9.4 13.98 9.67271 13.0236 10.1492 12.2M23.4 6.6C23.4 6.9866 23.0865 7.3 22.7 7.3C22.3135 7.3 22 6.9866 22 6.6M23.4 6.6C23.4 6.2134 23.0865 5.9 22.7 5.9C22.3135 5.9 22 6.2134 22 6.6M23.4 6.6H22M12.2 29H17.8C21.7204 29 23.6806 29 25.178 28.237C26.4951 27.566 27.566 26.4951 28.237 25.178C29 23.6806 29 21.7204 29 17.8V12.2C29 8.27964 29 6.31945 28.237 4.82207C27.566 3.50494 26.4951 2.43406 25.178 1.76296C23.6806 1 21.7204 1 17.8 1H12.2C8.27964 1 6.31945 1 4.82207 1.76296C3.50494 2.43406 2.43406 3.50494 1.76296 4.82207C1 6.31945 1 8.27964 1 12.2V17.8C1 21.7204 1 23.6806 1.76296 25.178C2.43406 26.4951 3.50494 27.566 4.82207 28.237C6.31945 29 8.27964 29 12.2 29Z"
                     stroke="white"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
               </a>
@@ -97,10 +97,10 @@ const Footer = () => {
                 ></path>
               </svg>
               <Link
-                href="#"
+                href="tel:+91-8805520651"
                 className="text-footer-primary/40 font-montserrat transition-all font-montserrat ease-in-out duration-300 hover:text-footer-primary text-lg font-normal "
               >
-                +1 516-342-XXXX
+                +91-8805520651
               </Link>
             </div>
             <div className="flex items-center justify-start md:justify-center sm:justify-end">
@@ -119,7 +119,7 @@ const Footer = () => {
                 ></path>
               </svg>
               <Link
-                href="#"
+                href="mailto:info@neuralnextsystems.com"
                 className="text-footer-primary/40 transition-all ease-in-out duration-300 hover:text-footer-primary text-lg font-normal font-montserrat"
               >
                 info@neuralnextsystems.com
@@ -131,12 +131,14 @@ const Footer = () => {
           <div className="mb-4 sm:mb-0 text-center sm:text-left">
             <ul className="flex items-center ">
               <li>
-                <a
-                  href="#"
+                <Link
+                  href={
+                    "https://www.standarde.in/_files/ugd/8b717c_52e3110ade944b21811d5cadf779cc07.docx?dn=HIGHLiGHT%20Privacy%20Policy.docx"
+                  }
                   className="text-footer-primary/60 font-manrope font-normal hover:text-footer-primary"
                 >
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
                 <p className="text-footer-primary/60 text-sm font-normal font-m px-3.5">

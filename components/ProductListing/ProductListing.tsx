@@ -84,7 +84,9 @@ const ProductListing: FC = () => {
                   <span className="uppercase text-base font-normal block">
                     STANDARDE
                   </span>
-                  <h5 className="text-xl font-semibold mt-1">HIGHLIGHT</h5>
+                  <h5 className="text-xl font-semibold mt-1">
+                    HIGHLIGHT Platform.
+                  </h5>
                 </div>
                 <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center">
                   <svg
@@ -212,13 +214,13 @@ const ProductListing: FC = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="bg-card-bg pb-0 rounded-20px md:rounded-32px h-470px md:h-560px  overflow-hidden">
-              <div className="flex items-center justify-between p-8">
+            <div className="bg-card-bg p-8 pb-0 rounded-20px md:rounded-32px  overflow-hidden h-470px md:h-560px">
+              <div className="flex items-center justify-between">
                 <div className="relative">
                   <span className="uppercase text-base font-normal block">
                     STANDARDE
                   </span>
-                  <h5 className="text-xl font-semibold mt-1">POS</h5>
+                  <h5 className="text-xl font-semibold mt-1"> POS</h5>
                 </div>
                 <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center">
                   <svg
@@ -235,7 +237,7 @@ const ProductListing: FC = () => {
                   </svg>
                 </div>
               </div>
-              <div className="relative mt-16 pl-8">
+              <div className="relative mt-16">
                 <Image
                   src={Pos}
                   alt="ProductSlide"

@@ -13,12 +13,25 @@ const Navbar = () => {
     if (menuOpen) setMenuOpen(false);
   });
 
+  const navigation = [
+    {
+      title: "HIGHLIGHT",
+      link: "https://www.highlight.standarde.in",
+    },
+    {
+      title: "STANDARDE Stores",
+      link: "https://www.standarde.in/",
+    },
+  ];
+
   return (
     <header className="border-black/10 py-4 px-15px lg:px-14 xl:px-32 backdrop-blur-md w-full fixed top-0 z-[999]">
       <div className="container mx-auto px-0">
         <div className="flex justify-between items-center">
           <div className="navbar-brand  ">
-            <a href="#" className="uppercase font-semibold text-2xl text-white">standarde</a>
+            <a href="#" className="uppercase font-semibold text-2xl text-white">
+              standarde
+            </a>
           </div>
           <div className="flex items-start lg:hidden cs-btns" ref={menuRef}>
             <Button
@@ -37,32 +50,28 @@ const Navbar = () => {
             </Button>
           </div>
           <nav className="hidden lg:flex space-x-8 xl:space-x-10 text-white ">
-            {["Solutions", "Technology", "Resource", "Company", "Contact"].map(
-              (item) => (
-                <Link
-                  key={item}
-                  href="#"
-                  className="hover:text-gray-300 hover:opacity-100 opacity-70 text-sm xl:text-base font-normal leading-6 text-left"
-                >
-                  {item}
-                </Link>
-              )
-            )}
+            {navigation.map((item) => (
+              <Link
+                key={item.link}
+                href={item.link}
+                className="hover:text-gray-300 hover:opacity-100 opacity-70 text-sm xl:text-base font-normal leading-6 text-left"
+              >
+                {item.title}
+              </Link>
+            ))}
           </nav>
         </div>
         {menuOpen && (
           <nav className="lg:hidden flex flex-col mt-4 space-y-3 md:space-y-4 text-white text-sm md:text-base ml-2">
-            {["Solutions", "Technology", "Resource", "Company", "Contact"].map(
-              (item) => (
-                <Link
-                  key={item}
-                  href="#"
-                  className="hover:text-gray-300 hover:opacity-100 opacity-60 font-light leading-6 text-left"
-                >
-                  {item}
-                </Link>
-              )
-            )}
+            {navigation.map((item) => (
+              <Link
+                key={item.link}
+                href={item.link}
+                className="hover:text-gray-300 hover:opacity-100 opacity-60 font-light leading-6 text-left"
+              >
+                {item.title}
+              </Link>
+            ))}
           </nav>
         )}
       </div>
