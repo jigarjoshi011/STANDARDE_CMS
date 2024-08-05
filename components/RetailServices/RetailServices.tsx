@@ -9,6 +9,7 @@ import Store from "../../public/images/store.svg";
 import Mobproduct from "../../public/images/mobile-view-product.png";
 import Grideight from "../../public/images/customer.svg";
 import Button from "../Button/Button";
+import Link from "next/link";
 
 const RetailServices = () => {
   return (
@@ -26,6 +27,31 @@ const RetailServices = () => {
             India&apos;s local consumers. Propelling them into the next orbit of
             Digitisation in India.
           </p>
+          <Link
+            href={"https://www.highlight.standarde.in"}
+            className="inline-flex items-center px-6 py-3 border border-white rounded-full text-sm md:text-base font-medium transition-colors "
+          >
+            Learn More
+            <svg
+              className="fill-white w-3 h-3 ml-3.5"
+              viewBox="0 0 12 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M11.4242 0.575638C11.6585 0.809953 11.6585 1.18985 11.4242 1.42417L1.42417 11.4242C1.18985 11.6585 0.809953 11.6585 0.575638 11.4242C0.341324 11.1899 0.341324 10.81 0.575638 10.5756L10.5756 0.575638C10.81 0.341324 11.1899 0.341324 11.4242 0.575638Z"
+                fill="white"
+              />
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M0.399902 0.999902C0.399902 0.668532 0.668532 0.399902 0.999902 0.399902H10.9999C11.3313 0.399902 11.5999 0.668532 11.5999 0.999902V10.9999C11.5999 11.3313 11.3313 11.5999 10.9999 11.5999C10.6685 11.5999 10.3999 11.3313 10.3999 10.9999V1.5999H0.999902C0.668532 1.5999 0.399902 1.33127 0.399902 0.999902Z"
+                fill="white"
+              />
+            </svg>
+          </Link>
         </div>
         <div className="l-ContentColumn w-full max-w-full xl:max-w-[1200px] mx-auto px-15px lg:px-4 md:px-4 ">
           <Image
