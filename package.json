@@ -11,7 +11,7 @@
   "dependencies": {
     "@types/react-slick": "^0.23.13",
     "@types/three": "^0.166.0",
-    "axios": "^1.7.2",
+    "axios": "^1.7.4",
     "cross-env": "^7.0.3",
     "next": "14.2.4",
     "react": "^18",
